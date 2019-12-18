@@ -10,6 +10,12 @@ set -e
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
 sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex
 
+## TODO: do not hardcode version 4.19
+## parse version number from where?
+## apt-cache show linux-source
+## Depends: linux-source-4.19
+version="4.19"
+
 ## TODO: Probably better using mktemp?
 working_folder=~/kernel
 
@@ -22,12 +28,6 @@ source_folder="${working_folder}/linux-source-${version}/"
 mkdir -p "$working_folder"
 
 pushd "$working_folder"
-
-## TODO: do not hardcode version 4.19
-## parse version number from where?
-## apt-cache show linux-source
-## Depends: linux-source-4.19
-version="4.19"
 
 tar -xaf "/usr/src/linux-source-${version}.tar.xz"
 
