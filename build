@@ -27,23 +27,11 @@ source_folder="${working_folder}/linux-source-${version}/"
 
 mkdir -p "$working_folder"
 
-pushd "$working_folder"
+tar -xaf "/usr/src/linux-source-${version}.tar.xz" -C "$working_folder"
 
-tar -xaf "/usr/src/linux-source-${version}.tar.xz"
-
-popd
-
-pushd "$source_folder"
-
-xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch -p1
-
-popd
+xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch --silent -p1 -d "$source_folder"
 
 ## TODO: path to .config
-cp usr/share/hardened-vm-kernel/kernel-config "$source_folder"
+cp usr/share/hardened-vm-kernel/kernel-config "$source_folder/.config"
 
-pushd "$source_folder"
-
-make defconfig
-
-make deb-pkg
+make deb-pkg -j $(nproc) -C "$source_folder"
