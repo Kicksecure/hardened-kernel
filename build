@@ -1,0 +1,49 @@
+#!/bin/bash
+
+## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+set -x
+
+set -e
+
+## TODO: This probably has to be converted to debian/control 'Depends:'.
+sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex
+
+## TODO: Probably better using mktemp?
+working_folder=~/kernel
+
+source_folder="${working_folder}/linux-source-${version}/"
+
+## TODO: Wipe existing working_folder?
+
+## TODO: working_folder permissions
+
+mkdir -p "$working_folder"
+
+pushd "$working_folder"
+
+## TODO: do not hardcode version 4.19
+## parse version number from where?
+## apt-cache show linux-source
+## Depends: linux-source-4.19
+version="4.19"
+
+tar -xaf "/usr/src/linux-source-${version}.tar.xz"
+
+popd
+
+pushd "$source_folder"
+
+xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch -p1
+
+popd
+
+## TODO: path to .config
+cp usr/share/hardened-vm-kernel/kernel-config "$source_folder"
+
+pushd "$source_folder"
+
+make defconfig
+
+make deb-pkg
