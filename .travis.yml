@@ -1,4 +1,6 @@
 dist: bionic
 
+language: minimal
+
 script:
 - ./usr/share/hardened-vm-kernel/ci_test
