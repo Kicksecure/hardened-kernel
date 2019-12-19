@@ -7,6 +7,8 @@ set -x
 
 set -e
 
+MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
 sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
 
@@ -42,7 +44,6 @@ else
    xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch --silent -p1 -d "$source_folder"
 fi
 
-## TODO: path to .config
-cp usr/share/hardened-vm-kernel/kernel-config "$source_folder/.config"
+cp "${MYDIR}/kernel-config" "$source_folder/.config"
 
 make deb-pkg -j $(nproc) -C "$source_folder"
