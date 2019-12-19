@@ -9,4 +9,6 @@ set -e
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+sudo apt-get update
+
 "${MYDIR}/build"
