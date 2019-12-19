@@ -7,4 +7,6 @@ set -x
 
 set -e
 
-exit 0
+MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+"${MYDIR}/build"
