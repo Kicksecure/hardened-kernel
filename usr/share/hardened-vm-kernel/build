@@ -46,4 +46,7 @@ fi
 
 cp "${MYDIR}/kernel-config" "$source_folder/.config"
 
+## Sanity test.
+diff "${MYDIR}/kernel-config" "$source_folder/.config"
+
 make deb-pkg -j $(nproc) -C "$source_folder"
