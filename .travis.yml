@@ -1,0 +1,4 @@
+dist: bionic
+
+script:
+- ./usr/share/hardened-vm-kernel/ci_test
