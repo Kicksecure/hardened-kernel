@@ -8,7 +8,7 @@ set -x
 set -e
 
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
-sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex
+sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
 
 ## TODO: do not hardcode version 4.19
 ## parse version number from where?
