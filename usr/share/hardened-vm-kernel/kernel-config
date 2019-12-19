@@ -85,9 +85,12 @@ CONFIG_NO_HZ_IDLE=y
 # CONFIG_NO_HZ_FULL is not set
 # CONFIG_NO_HZ is not set
 CONFIG_HIGH_RES_TIMERS=y
+CONFIG_HAVE_PREEMPT_LAZY=y
 # CONFIG_PREEMPT_NONE is not set
 CONFIG_PREEMPT_VOLUNTARY=y
-# CONFIG_PREEMPT is not set
+# CONFIG_PREEMPT__LL is not set
+# CONFIG_PREEMPT_RTB is not set
+# CONFIG_PREEMPT_RT_FULL is not set
 
 #
 # CPU/Task time and stats accounting
