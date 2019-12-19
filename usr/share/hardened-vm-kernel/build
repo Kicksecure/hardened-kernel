@@ -32,9 +32,15 @@ source_folder="${working_folder}/linux-source-${version}/"
 
 mkdir -p "$working_folder"
 
-tar -xaf "/usr/src/linux-source-${version}.tar.xz" -C "$working_folder"
-
-xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch --silent -p1 -d "$source_folder"
+if [ "$CI" = "true" ]; then
+   ## TODO: Do not hardcode path to Linux source archive on CI.
+   tar -xaf "/usr/src/linux-source-4.15.0.tar.bz2" -C "$working_folder"
+else
+   ## Debian buster:
+   ## /usr/src/linux-source-4.19.tar.xz
+   tar -xaf "/usr/src/linux-source-${version}.tar.xz" -C "$working_folder"
+   xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch --silent -p1 -d "$source_folder"
+fi
 
 ## TODO: path to .config
 cp usr/share/hardened-vm-kernel/kernel-config "$source_folder/.config"
