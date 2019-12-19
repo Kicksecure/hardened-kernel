@@ -10,11 +10,16 @@ set -e
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
 sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
 
-## TODO: do not hardcode version 4.19
-## parse version number from where?
-## apt-cache show linux-source
-## Depends: linux-source-4.19
-version="4.19"
+linux_source_depends="$(dpkg-query --show --showformat='${depends}' "linux-source")"
+## example linux_source_depends:
+## linux-source-4.19
+
+remove_string="linux-source-"
+
+version="${linux_source_depends##$remove_string}"
+
+## example version:
+## 4.19
 
 ## TODO: Probably better using mktemp?
 working_folder=~/kernel
