@@ -1,3 +1,21 @@
+commit 37a46512aaeb60ba9918458f391d1d423e5fadee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 23 08:31:29 2019 -0500
+
+    readme
+
+commit 946453192a048eb59b78e80a685ca6a2db82eeae
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 23 08:31:10 2019 -0500
+
+    delete broken Ubuntu .travis.yml
+
+commit d2da340d176b1ec4caa6399aa091912a88aff470
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 23 08:00:29 2019 -0500
+
+    initial packaging
+
 commit 3ee2b48aedde922c5466675023754ac5611db8d7
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 19 09:14:30 2019 -0500
