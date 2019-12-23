@@ -1,0 +1,5 @@
+hardened-kernel (3:0.1-2) unstable; urgency=low
+
+  * Initial release.
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Mon, 23 Dec 2019 17:56:29 +0000

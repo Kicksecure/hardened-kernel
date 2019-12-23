@@ -1,0 +1,330 @@
+commit 3ee2b48aedde922c5466675023754ac5611db8d7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 09:14:30 2019 -0500
+
+    fix non-interactive build issue
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/159
+
+commit b9ef5ad2fa241adbd233b4a5ed274b9e26795017
+Merge: 03ff567 1655267
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 09:04:38 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 16552679edb5c214619040a644c087da62cb4bd2
+Merge: 03ff567 e1e63c0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 14:04:07 2019 +0000
+
+    Merge pull request #12 from madaidan/gcc-plugins
+    
+    Enable GCC plugins
+
+commit 03ff56715462ea3601e5b2f2f2c1f51bb138ec5e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:45:36 2019 -0500
+
+    quotes
+
+commit 0899b62bd5d73a08c2962cd5a93fbbd983838ac1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:45:23 2019 -0500
+
+    Sanity test.
+
+commit 691a5b0130843972a7bc240f48d3b885e6167cf5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:44:56 2019 -0500
+
+    fix path to kernel config
+
+commit 7228e0fd3913a748331c1cd69af85497729d6804
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:44:08 2019 -0500
+
+    CI
+
+commit f96c81bab0e61a32fd95f772cf06d2375d396a73
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:37:23 2019 -0500
+
+    no longer hardcode version
+
+commit ea654a283fb7e9128d187e1221ad97ae20c4d66e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:21:24 2019 -0500
+
+    CI: sudo apt-get update
+
+commit c914ef89d40d7befbc544c6aba2574dac67865d8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:20:13 2019 -0500
+
+    CI language: minimal
+
+commit 634c95555af6cb490ac71e305d5700626c05f2bb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:18:11 2019 -0500
+
+    CI run build script
+
+commit ec59c00f135edaf3ab4721d9b18a44e90a709b11
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:17:04 2019 -0500
+
+    moved build -> usr/share/hardened-vm-kernel/build
+
+commit fb3df4e2cf70ec57d9f117a5d6d47fa987593814
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:16:30 2019 -0500
+
+    add skeleton CI test files
+
+commit c79d4278cb6344e05d26ece687bbab0bc6cf313b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 19 08:08:39 2019 -0500
+
+    add gcc-8-plugin-dev
+    
+    as reported by @madaidan
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/147
+
+commit e1e63c059a57e28b9bd9c5ca642397ba717cef9a
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Dec 18 19:59:50 2019 +0000
+
+    Enable GCC plugins
+
+commit 0a29b7d09dd31952766d61b3bb3991f945725954
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 18 14:57:46 2019 -0500
+
+    add suggestions by @madaidan
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/145
+
+commit 083aa69d94eec543017c554d99d47dd20becc100
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 18 08:51:49 2019 -0500
+
+    fix
+
+commit 198df6269dbcf75ebb3c733f44ba677a4fd04164
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 18 08:46:46 2019 -0500
+
+    initial version of build script
+
+commit 1869bd5d1891253cd78270fb7cf330ea1df133f7
+Merge: 95032af e8a5d6b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 18 08:15:29 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e8a5d6b6100410e1f8b8314eb820a3cb166d48f6
+Merge: c0d45e4 390c6ae
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 18 12:36:53 2019 +0000
+
+    Merge pull request #10 from madaidan/hardening
+    
+    More hardening
+
+commit 390c6ae36697e93ff345477b90ed9ec124a7c0ac
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Dec 16 19:57:53 2019 +0000
+
+    More hardening
+
+commit c0d45e4f0e68e2507b601024453e7c7e7cdbdd21
+Merge: 1d806c7 6297adf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 12 20:16:28 2019 +0000
+
+    Merge pull request #8 from madaidan/distrust-cpu
+    
+    Distrust the CPU for initial entropy
+
+commit 1d806c7ed8f9a8f0ae573d18d072a1aed992d437
+Merge: 8f27189 e6b8c4b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Dec 12 20:16:13 2019 +0000
+
+    Merge pull request #7 from madaidan/hardening
+    
+    More hardening
+
+commit e6b8c4b4049fe2d98aba8f4de866718106f68a79
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 12 19:58:12 2019 +0000
+
+    Re-enable coredumps
+
+commit 8f27189f3b9a9b1c4059517c8132649575250a51
+Merge: 95032af 188da78
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 11 21:29:13 2019 +0000
+
+    Merge pull request #6 from madaidan/disable-ksm
+    
+    Disable KSM
+
+commit 95032afa3362093f625e2608ac9cd8ad3ba40f53
+Merge: 41d2ad5 ac6c752
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Dec 3 06:35:46 2019 +0000
+
+    Merge pull request #9 from madaidan/jitterentropy
+    
+    Compile jitterentropy as built-in
+
+commit ac6c752b656d82fa227a8e4e10a946aa8cd693db
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Dec 2 16:54:20 2019 +0000
+
+    Compile jitterentropy as built-in
+
+commit 6297adffa858dbea81a5c0c9b0f36febdc126faa
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Dec 2 16:44:05 2019 +0000
+
+    Distrust the CPU for initial entropy
+
+commit a82640be77905c06cacfe56c91b002f92348a72b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 29 20:01:20 2019 +0000
+
+    More hardening
+
+commit 188da7849814392d0290208087f44a7b1eb7fefb
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Nov 24 12:43:11 2019 +0000
+
+    Disable KSM
+
+commit 41d2ad501f6a5b274fb2472eae2bc296b30dab74
+Merge: 58a5d0f a9a63de
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Nov 23 15:47:26 2019 +0000
+
+    Merge pull request #5 from madaidan/disable-aio
+    
+    Disable AIO
+
+commit a9a63deb995504c5430f1e27c2913ada5e6ee993
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Nov 23 15:24:23 2019 +0000
+
+    Disable AIO
+
+commit 58a5d0f73053d26b2a32b17665b30b03a5dff1e6
+Merge: cc006be c890430
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Nov 23 15:09:53 2019 +0000
+
+    Merge pull request #4 from madaidan/unneeded
+    
+    Remove unneeded stuff
+
+commit c89043075216a7098b7603009f2334d73bd4d73b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Nov 23 13:16:31 2019 +0000
+
+    Update kernel-config
+
+commit 84914bdc092a18ea547aaa40ca3d8e892d500e52
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Nov 23 13:15:52 2019 +0000
+
+    Remove unneeded stuff
+
+commit cc006be554e5fac5fe3efceaee9416a56cdce5ac
+Merge: 378bd2e 74e8fe5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Nov 23 06:20:51 2019 +0000
+
+    Merge pull request #3 from madaidan/kvm
+    
+    KVM fixes
+
+commit 74e8fe5be1698f8d94712fb7ccdbe90471be9ccf
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 22 19:40:50 2019 +0000
+
+    Remove suffix
+
+commit 08aefceb8c9ee3f0d268fee8d81263a9ff62363f
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Nov 20 22:11:09 2019 +0000
+
+     Add "-hardened" suffix
+
+commit ec5dd1ae591e77576986e4d1826172d66137d3f9
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Nov 20 22:08:05 2019 +0000
+
+    Update kernel-config
+
+commit 378bd2e860959b8bfc349b8f348c3fe00980f720
+Merge: 57bf57a 5c873d9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Nov 13 06:52:00 2019 +0000
+
+    Merge pull request #2 from madaidan/hardening
+    
+    Disable ftrace
+
+commit 5c873d9ad90b164dd79d806b129a74608de2ebb5
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Nov 12 18:39:30 2019 +0000
+
+    Disable ftrace
+
+commit 57bf57aec123eab9ce64400388bb3724dcd3f4b4
+Merge: 4e8aa21 e9fc275
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Nov 12 10:03:23 2019 +0000
+
+    Merge pull request #1 from madaidan/hardening
+    
+    More hardening
+
+commit e9fc275d0e321278c7ac0c6e61eabf587a7b3b51
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Nov 11 18:06:52 2019 +0000
+
+    More hardening
+
+commit 4e8aa214942bb4a28c2fcf9bd80fff149e6e82c3
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Nov 9 00:26:48 2019 +0000
+
+    e1000 and piix4 are needed for virtualbox
+
+commit ba560c816e192624a183a59f9907c253395ff391
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 8 22:49:06 2019 +0000
+
+    Re-enable netfilter SCTP modules
+
+commit 37763dbdfb85e534609fc891369b11e21360774e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 8 22:31:13 2019 +0000
+
+    Create README.md
+
+commit 407dc6100bfc1708e89c4429daff59d35d0660ba
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 8 22:28:33 2019 +0000
+
+    Hardened config
+
+commit e94ae689a530c4bc13f87dc4bf5c59d7eed903ca
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Nov 8 22:28:04 2019 +0000
+
+    Default Debian config
