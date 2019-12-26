@@ -13,7 +13,7 @@ Standards-Version: 4.3.0
 
 Package: hardened-kernel
 Architecture: all
-Depends: curl, ${misc:Depends}
+Depends: curl, scurl, ${misc:Depends}
 Description: Hardened VM Kernel
  Can recompile a hardened Linux kernel on the user's machine.
  .
