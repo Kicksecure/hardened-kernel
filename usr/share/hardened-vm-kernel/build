@@ -10,23 +10,17 @@ set -e
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
-sudo apt-get --no-install-recommends --yes install linux-source build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
+sudo apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
 
-linux_source_depends="$(dpkg-query --show --showformat='${depends}' "linux-source")"
-## example linux_source_depends:
-## linux-source-4.19
-
-remove_string="linux-source-"
-
-version="${linux_source_depends##$remove_string}"
-
-## example version:
-## 4.19
+version="4.19.91"
 
 ## TODO: Probably better using mktemp?
 working_folder=~/kernel
 
-source_folder="${working_folder}/linux-source-${version}/"
+source_folder="${working_folder}/linux-${version}/"
+
+kernel_source="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+linux_hardened_patch="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
 
 ## TODO: Wipe existing working_folder?
 
@@ -38,10 +32,10 @@ if [ "$CI" = "true" ]; then
    ## TODO: Do not hardcode path to Linux source archive on CI.
    tar -xaf "/usr/src/linux-source-4.15.0.tar.bz2" -C "$working_folder"
 else
-   ## Debian buster:
-   ## /usr/src/linux-source-4.19.tar.xz
-   tar -xaf "/usr/src/linux-source-${version}.tar.xz" -C "$working_folder"
-   xzcat "/usr/src/linux-patch-${version}-rt.patch.xz" | patch --silent -p1 -d "$source_folder"
+   scurl-download "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
+   scurl-download "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
+   tar -xf "${working_folder}/linux-${version}.tar.xz" -C "${source_folder}"
+   cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 fi
 
 cp "${MYDIR}/kernel-config" "$source_folder/.config"
