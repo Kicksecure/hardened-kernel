@@ -9,8 +9,12 @@ set -e
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+## Debugging.
+whoami
+env
+
 if [ "$CI" = "true" ]; then
-   sudo_tool=""
+   sudo_tool="sudo --non-interactive"
 else
    sudo_tool="sudo"
 fi

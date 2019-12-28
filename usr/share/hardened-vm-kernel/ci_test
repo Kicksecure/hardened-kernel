@@ -9,6 +9,10 @@ set -e
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+## travis.debian.net does not pass the CI environment variable to docker.
+CI=true
+export CI
+
 apt-get update
 
 "${MYDIR}/build"
