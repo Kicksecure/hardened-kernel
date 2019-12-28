@@ -9,8 +9,14 @@ set -e
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if [ "$CI" = "true" ]; then
+   sudo_tool=""
+else
+   sudo_tool="sudo"
+fi
+
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
-sudo apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev curl
+$sudo_tool apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev curl
 
 version="4.19.91"
 
