@@ -14,6 +14,11 @@ CI=true
 export CI
 
 apt-get update
+
+## Sanity tests.
+apt-get --yes dist-upgrade
+dpkg --configure -a
+
 apt-get --yes install sudo
 
 "${MYDIR}/build"
