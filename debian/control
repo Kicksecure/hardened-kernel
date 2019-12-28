@@ -5,7 +5,7 @@ Source: hardened-kernel
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12), genmkfile
+Build-Depends: debhelper (>= 12)
 Homepage: https://github.com/Whonix/hardened-kernel
 Vcs-Browser: https://github.com/Whonix/hardened-kernel
 Vcs-Git: https://github.com/Whonix/hardened-kernel.git

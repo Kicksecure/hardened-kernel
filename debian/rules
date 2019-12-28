@@ -10,3 +10,15 @@
 
 override_dh_installchangelogs:
 	dh_installchangelogs changelog.upstream upstream
+
+override_dh_auto_build:
+	true
+
+override_dh_auto_clean:
+	true
+
+override_dh_auto_install:
+	true
+
+override_dh_auto_test:
+	true
