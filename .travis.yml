@@ -9,3 +9,8 @@ script:
 
 if:
   tag IS blank
+
+env:
+  - TRAVIS_DEBIAN_DISTRIBUTION=Kicksecure
+  - TRAVIS_DEBIAN_DISTRIBUTION=buster
+  - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/hardened-vm-kernel/ci_test
