@@ -43,7 +43,12 @@ curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header
 curl $curl_opts "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
 curl $curl_opts "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
 
-tar -xf "${working_folder}/linux-${version}.tar.xz" -C "${source_folder}"
+tar -xf "${working_folder}/linux-${version}.tar.xz" -C "$working_folder"
+
+## Debugging.
+ls "$working_folder"
+ls "$source_folder"
+
 cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 
 cp "${MYDIR}/kernel-config" "$source_folder/.config"
