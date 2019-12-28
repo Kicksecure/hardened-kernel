@@ -28,15 +28,10 @@ linux_hardened_patch="https://github.com/anthraxx/linux-hardened/releases/downlo
 
 mkdir -p "$working_folder"
 
-if [ "$CI" = "true" ]; then
-   ## TODO: Do not hardcode path to Linux source archive on CI.
-   tar -xaf "/usr/src/linux-source-4.15.0.tar.bz2" -C "$working_folder"
-else
-   scurl-download "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
-   scurl-download "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
-   tar -xf "${working_folder}/linux-${version}.tar.xz" -C "${source_folder}"
-   cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
-fi
+scurl-download "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
+scurl-download "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
+tar -xf "${working_folder}/linux-${version}.tar.xz" -C "${source_folder}"
+cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 
 cp "${MYDIR}/kernel-config" "$source_folder/.config"
 
