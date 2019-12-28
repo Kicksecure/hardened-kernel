@@ -10,7 +10,7 @@ set -e
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## TODO: This probably has to be converted to debian/control 'Depends:'.
-sudo apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev
+sudo apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev curl
 
 version="4.19.91"
 
@@ -28,8 +28,10 @@ linux_hardened_patch="https://github.com/anthraxx/linux-hardened/releases/downlo
 
 mkdir -p "$working_folder"
 
-scurl-download "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
-scurl-download "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
+curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
+
+curl $curl_opts "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
+curl $curl_opts "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
 tar -xf "${working_folder}/linux-${version}.tar.xz" -C "${source_folder}"
 cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 
