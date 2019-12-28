@@ -14,5 +14,6 @@ CI=true
 export CI
 
 apt-get update
+apt-get --yes install sudo
 
 "${MYDIR}/build"
