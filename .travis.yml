@@ -12,6 +12,7 @@ if:
   tag IS blank
 
 env:
+  global:
   - TRAVIS_DEBIAN_DISTRIBUTION=buster
   - TRAVIS_DEBIAN_SECURITY_UPDATES=true
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/hardened-vm-kernel/ci_test
