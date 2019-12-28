@@ -19,6 +19,10 @@ apt-get update
 apt-get --yes dist-upgrade
 dpkg --configure -a
 
-apt-get --yes install sudo
+apt-get --yes install sudo virt-what
+
+## Debugging.
+systemd-detect-virt || true
+virt-what || true
 
 "${MYDIR}/build"
