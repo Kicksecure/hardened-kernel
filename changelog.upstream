@@ -1,3 +1,238 @@
+commit 915118150beafce8ef44f199dd886f1a910cfd67
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 05:19:36 2019 -0500
+
+    CI debugging
+
+commit a0f3052cc6643cb7bfc81cef3b2bede6d5da84f1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 05:03:16 2019 -0500
+
+    fix "dpkg-checkbuilddeps: error: Unmet build dependencies: bc kmod cpio"
+
+commit 417773f04ce77bded03a2384c787105c7b912c73
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:58:40 2019 -0500
+
+    try fix
+    
+    tar -xf /root/kernel/linux-4.19.91.tar.xz -C /root/kernel/linux-4.19.91/
+    tar: /root/kernel/linux-4.19.91: Cannot open: No such file or directory
+
+commit e507352abd0d06a8870854b91699b9de763433c3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:37:59 2019 -0500
+
+    CI
+
+commit 6b2717329fd714078c99eeab221f8a930b767121
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:37:08 2019 -0500
+
+    CI
+
+commit bd36d6b2f57deedcf083319a5391c74525a416ff
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:33:53 2019 -0500
+
+    CI
+
+commit 513483ddadc58fb30c9b283f69a7fc7f3238f4ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:23:07 2019 -0500
+
+    minor
+
+commit 285b589c4c4c06eeae186a2b3141618cda2c0e0d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:22:48 2019 -0500
+
+    CI
+
+commit 4bd6d8ad0b184763c777cb9c9d7ea803ab9a0e46
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:21:38 2019 -0500
+
+    remove dependency on scurl
+
+commit 14b5f1c9d6949dba2176c86e48b19f3fe790fdfc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:20:09 2019 -0500
+
+    CI
+
+commit 2b4674df4f8e4989450ed7891d18cdc661c85cf5
+Merge: c2a6c75 f1e2726
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:19:07 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f1e27266b42dff259486dc7cc01c5ebf0bfa67c7
+Merge: c2a6c75 f13a1ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 09:18:41 2019 +0000
+
+    Merge pull request #14 from madaidan/linux-hardened
+    
+     Use kernel.org sources and apply linux-hardened patch
+
+commit c2a6c750ef99424044f373a26e7119daae3c90e3
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:04:34 2019 +0000
+
+    linux-hardened config options
+
+commit 087aebfa724566328054f4fe6f841b20cb016d83
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:02:51 2019 +0000
+
+    Update to 4.19.91
+
+commit e59d5d3d90e6b07b89794aea69c92306148e463f
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:06:24 2019 +0000
+
+    Disable page poisoning
+    
+    We're going to use linux-hardened's CONFIG_PAGE_SANITIZE instead
+
+commit 9a089d4e909c110e5e716c1c72920e69ee89a5a6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:11:45 2019 -0500
+
+    CI
+
+commit 2d92b2e8fd8906ee63ec155bb697ac7c5f15ad80
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 04:00:03 2019 -0500
+
+    CI
+
+commit bab80f51ab6ffaa1cee5a47da830c78824b96f0d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:50:19 2019 -0500
+
+    CI
+
+commit 14c9314d1cfe8bd9e4898209a7a5fb85132e61cc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:44:14 2019 -0500
+
+    CI
+
+commit ec5f72fa506c9b571dca05c532887c34d27242cd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:37:55 2019 -0500
+
+    CI
+
+commit 69fbf7b0e0db1e11f0055827e041d463bf7d604e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:29:31 2019 -0500
+
+    CI
+
+commit 9a1930019a061fa3425976568aba144a6ee26474
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:17:21 2019 -0500
+
+    build without genmkfile
+
+commit de7ffef067ce74b6312531bc161d52f8d7901761
+Merge: 518485c d1359be
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:09:40 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 518485c573478c911cf7b40f7cb02c419483dad1
+Merge: 7ced9cc 2d2e1aa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:08:44 2019 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7ced9cc3119289f62edd96677337178cd6cfde5f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:07:43 2019 -0500
+
+    Add /.travis.yml to extend-diff-ignore in debian/source/options.
+
+commit d0558d0bc1b18c8db9b29d7ecaee258ca8a731d5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Dec 28 02:06:54 2019 -0500
+
+    Add .travis.yml from <http://travis.debian.net>
+
+commit d1359be168af6913ca7289dce2c90a0c7139dfce
+Merge: 2d2e1aa 6d6e82b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 27 06:35:26 2019 +0000
+
+    Merge pull request #15 from madaidan/jobs
+    
+    Use [number_of_cores + 1] parallel jobs for compilation
+
+commit 6d6e82b5ff01d9f22f1a55902511e49f478f78aa
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:22:27 2019 +0000
+
+    Use [number_of_cores + 1] parallel jobs for compilation
+
+commit f13a1eec761148d053cc6564738900f7ddafbf44
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:17:56 2019 +0000
+
+    Depend on scurl
+
+commit e60cb6009fafcfa7ebf78a6d1703836f8cc04613
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:16:29 2019 +0000
+
+    Use kernel.org sources apply linux-hardened patch
+
+commit 7d8160cfe3c954687caa5ffcbdcd2e11c3417c00
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:06:24 2019 +0000
+
+    Disable page poisoning
+    
+    We're going to use linux-hardened's CONFIG_PAGE_SANITIZE instead
+
+commit 224b93ca771b04c6e4175b8224931c3d284bf256
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:04:34 2019 +0000
+
+    linux-hardened config options
+
+commit 7018652982eb324e0a9f018104c190f1e60bbba5
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Dec 26 15:02:51 2019 +0000
+
+    Update to 4.19.91
+
+commit 2d2e1aa6970702df68939300c18fd899a6185b8f
+Merge: 03287a3 b0dc73e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Dec 25 12:34:20 2019 +0000
+
+    Merge pull request #13 from madaidan/networking
+    
+    Disable some unneeded networking stuff
+
+commit b0dc73ee6bc0e7e36b8b2654286035749f329215
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Dec 24 22:50:51 2019 +0000
+
+    Disable some unneeded networking stuff
+
+commit 03287a3f3de7c3a28665e76f33a41be008896fc4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 23 08:31:51 2019 -0500
+
+    bumped changelog version
+
 commit 37a46512aaeb60ba9918458f391d1d423e5fadee
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Dec 23 08:31:29 2019 -0500
