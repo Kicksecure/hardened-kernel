@@ -51,10 +51,12 @@ ls "$source_folder"
 
 cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 
-cp "${MYDIR}/kernel-config" "$source_folder/.config"
+kernel_config="kernel-config"
+
+cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
 ## Sanity test.
-diff "${MYDIR}/kernel-config" "$source_folder/.config"
+diff "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
 make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
 
