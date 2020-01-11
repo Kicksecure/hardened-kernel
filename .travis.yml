@@ -15,7 +15,7 @@ env:
   global:
   - TRAVIS_DEBIAN_DISTRIBUTION=buster
   - TRAVIS_DEBIAN_SECURITY_UPDATES=true
-  - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/hardened-vm-kernel/ci_test
+  - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/hardened-kernel/ci_test
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE_OPTIONS=" "
   - TRAVIS_DEBIAN_NETWORK_ENABLED=true
   - TRAVIS_DEBIAN_EXTRA_PACKAGES="lintian sudo"
