@@ -57,3 +57,6 @@ cp "${MYDIR}/kernel-config" "$source_folder/.config"
 diff "${MYDIR}/kernel-config" "$source_folder/.config"
 
 make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
+
+## Debugging.
+ls "$working_folder"
