@@ -1,10 +1,35 @@
 # Hardened VM Kernel #
 
-Can recompile a hardened Linux kernel on the user's machine.
+This is a hardened kernel configuration for Whonix/Kicksecure.
+hardened-vm-kernel is designed specifically for virtual machines and
+hardened-host-kernel is designed for hosts.
 
-Currently only for VMs.
+Both configs try to have as many hardening options enabled as possible and
+have little attack surface. hardened-vm-kernel only has support for VMs
+and all other hardware options are disabled to reduce attack surface and compile time.
 
-Maybe in future for host too.
+During installation of hardened-vm-kernel, it compiles the kernel on your own machine
+and does not use a pre-compiled kernel. This ensures the kernel symbols in the compiled
+image are completely unique which makes it far harder for kernel exploits. This is possible
+due to hardened-vm-kernel having only VM config options enabled which drastically reduces
+compile time.
+
+During installation of hardened-host-kernel, the kernel is not compiled on your machine and
+it uses a pre-compiled kernel. This is because the host kernel needs most hardware options enabled
+to support most devices which makes compilation take a very long time.
+
+The VM kernel is more secure than the host kernel due to having less attack surface and not
+being pre-compiled but if you want more security for the host, it is recommended to edit the
+hardened host config, enable only the hardware options you need and compile the kernel yourself.
+This makes the security of the host and VM kernel comparable.
+
+Both configs were based on the default Debian config.
+
+These kernels use the linux-hardened patch for further hardening. Custom hardening patches should be
+sent there.
+
+This only supports LTS kernels as they have the least attack surface (stable kernels have more code
+and more bugs) and the best stability.
 
 Build script /usr/share/hardened-vm-kernel/build does not run automatic yet.
 
