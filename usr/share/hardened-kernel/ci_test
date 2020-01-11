@@ -30,4 +30,4 @@ ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
 
 "${MYDIR}/build"
 
-true "INFO: ${MYDIR}/build success.
+true "INFO: ${MYDIR}/build success."
