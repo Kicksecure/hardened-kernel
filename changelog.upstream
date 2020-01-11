@@ -1,3 +1,31 @@
+commit 6c4cb84139e8d469f0cfbd7b1fffd0eee75456b0
+Merge: 959c126 ece5584
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 15:16:34 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ece55844f2b5c4364da0e78d9b5fb2923b6cdb13
+Merge: 959c126 251c056
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 20:16:10 2020 +0000
+
+    Merge pull request #21 from madaidan/vivid
+    
+    Disable vivid
+
+commit 251c056f4ffab99bb9b48c5d7d235937944ad7e2
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 11 18:42:13 2020 +0000
+
+    Disable vivid
+
+commit 959c126880b527e40f8df2207b54de767550bf61
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 06:38:25 2020 -0500
+
+    bumped changelog version
+
 commit 418d5cd76c3d431607761e3a2b043854222ccd1b
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 06:37:07 2020 -0500
