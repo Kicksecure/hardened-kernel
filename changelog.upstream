@@ -1,3 +1,120 @@
+commit 47299e4c86cd91ed6a6b0a3a564f2ca88b4a08a4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 05:09:41 2020 -0500
+
+    readme
+
+commit baadd1c399338140839716071cc5982de693fe15
+Merge: 3e3eec4 372a053
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 03:40:05 2020 -0500
+
+    Merge branch 'madaidan-host-kernel'
+
+commit 372a0539435efa7c109e65ce50342354d7abd924
+Merge: 3e3eec4 b8cc090
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 03:39:46 2020 -0500
+
+    Merge branch 'host-kernel' of ssh://github.com/madaidan/hardened-kernel into madaidan-host-kernel
+
+commit 3e3eec46d707cc892375b156c98511bf017b3683
+Merge: 3ea4a43 e92ee6b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 03:39:08 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e92ee6b7824e65c5706d908118e95229a9c95cba
+Merge: 82a379d 94e8527
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 08:33:48 2020 +0000
+
+    Merge pull request #18 from madaidan/sctp
+    
+    Disable SCTP
+
+commit 82a379dd3c0446d253346c986af20aad046e018e
+Merge: eccb835 48f1d8f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 08:30:03 2020 +0000
+
+    Merge pull request #19 from madaidan/bpf_jit_always_on
+    
+    Enable BPF_JIT_ALWAYS_ON
+
+commit b8cc09027e2df5336ee0f0648a09b0458b1ee26d
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 10 19:52:05 2020 +0000
+
+    Rename hardened-host-config to hardened-host-kernel
+
+commit 1a8bc88b8c46e1da721267582f00c09fe368a59e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 10 19:45:30 2020 +0000
+
+    Description
+
+commit c3cd86d565d88592badd86426cd61814fe9947ba
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 10 19:41:30 2020 +0000
+
+    Hardened config
+
+commit 937e59e860bae45d8f1901f15ba587932e112700
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 10 19:39:55 2020 +0000
+
+    Default Debian config
+
+commit eccb835c33d00ddcf18c4b480a31845bc2e96000
+Merge: 2ec6a68 bf08adc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 10 19:27:13 2020 +0000
+
+    Merge pull request #17 from madaidan/acpi_table_upgrade
+    
+    Disable ACPI table upgrading
+
+commit 2ec6a682b4494dfafb6ff1fbcd66c6d14f55ba38
+Merge: 3ea4a43 d61b091
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 10 19:26:22 2020 +0000
+
+    Merge pull request #16 from madaidan/4.19.93
+    
+    Update to 4.19.93
+
+commit 48f1d8fdbe417f0e2d10fa087f221a745428e9e3
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 9 20:19:27 2020 +0000
+
+    Enable BPF_JIT_ALWAYS_ON
+
+commit 94e8527e6bdade55d8ef83afe1bd31b273b872e0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 9 19:55:33 2020 +0000
+
+    Disable SCTP
+
+commit bf08adc8806e6c2d80de0ce10ea90b9ae3af170b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 9 19:21:55 2020 +0000
+
+    Disable ACPI table upgrading
+
+commit d61b0918e7c53df43bc8a3c20ff8529b66e8c1e2
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 9 19:13:43 2020 +0000
+
+    Update to 4.19.93
+
+commit 3ea4a43f8744d09ef36d182f9d325f3d9fb9c129
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 30 05:59:05 2019 -0500
+
+    bumped changelog version
+
 commit 915118150beafce8ef44f199dd886f1a910cfd67
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 28 05:19:36 2019 -0500
