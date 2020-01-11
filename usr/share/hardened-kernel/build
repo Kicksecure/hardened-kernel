@@ -51,7 +51,8 @@ ls "$source_folder"
 
 cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
 
-kernel_config="kernel-config"
+## TODO: do not hardcode and add support for hardened-host-kernel
+kernel_config="hardened-vm-kernel"
 
 cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
