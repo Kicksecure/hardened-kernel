@@ -26,3 +26,5 @@ systemd-detect-virt || true
 virt-what || true
 
 "${MYDIR}/build"
+
+true "INFO: ${MYDIR}/build success.
