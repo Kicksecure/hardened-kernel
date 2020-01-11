@@ -1,3 +1,9 @@
+hardened-kernel (3:0.5-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Sat, 11 Jan 2020 10:29:46 +0000
+
 hardened-kernel (3:0.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
