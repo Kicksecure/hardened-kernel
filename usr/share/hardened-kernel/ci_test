@@ -24,6 +24,9 @@ apt-get --yes install sudo virt-what
 ## Debugging.
 systemd-detect-virt || true
 virt-what || true
+pwd || true
+true "TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
+ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
 
 "${MYDIR}/build"
 
