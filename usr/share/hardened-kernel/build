@@ -7,6 +7,20 @@ set -x
 
 set -e
 
+while :
+do
+      case $1 in
+      --debug)
+         debug="true"
+         break
+         ;;
+      *)
+         echo "ERROR: Not a valid option."
+         exit 1
+         ;;
+      esac
+done
+
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## Debugging.
@@ -59,6 +73,11 @@ cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
 ## Sanity test.
 diff "${MYDIR}/${kernel_config}" "$source_folder/.config"
+
+if [ "${debug}" = "true" ]; then
+  cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
+  make olddefconfig
+fi
 
 make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
 
