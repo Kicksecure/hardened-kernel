@@ -75,6 +75,12 @@ cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 diff "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
 if [ "${debug}" = "true" ]; then
+  read -r -p "WARNING: You have configured to build your kernel with debugging enabled. This can severely worsen security. Continue? (y/n) " continue_debug
+  if ! [ "${continue_debug,,}" = "y" ]; then
+    echo "You have selected to not continue. Exiting."
+    exit
+  fi
+  
   cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
   make olddefconfig
 fi
