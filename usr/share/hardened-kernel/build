@@ -45,8 +45,12 @@ $sudo_tool apt-get --no-install-recommends --yes install build-essential libssl-
 
 version="4.19.93"
 
-## TODO: Probably better using mktemp?
-working_folder=~/kernel
+## TODO: do not hardcode and add support for hardened-host-kernel
+kernel_config="hardened-vm-kernel"
+
+## Location similar to DKMS.
+## DKMS uses /var/lib/dkms/lkrg/build/...
+working_folder="/var/lib/${kernel_config}/build"
 
 source_folder="${working_folder}/linux-${version}/"
 
@@ -72,9 +76,6 @@ ls "$working_folder"
 ls "$source_folder"
 
 cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
-
-## TODO: do not hardcode and add support for hardened-host-kernel
-kernel_config="hardened-vm-kernel"
 
 cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
