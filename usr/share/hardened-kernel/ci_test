@@ -32,4 +32,4 @@ ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
 
 "${MYDIR}/build" --vm --debug --non-interactive
 
-true "INFO: ${MYDIR}/build success."
+true "$0 INFO: ${MYDIR}/build success."
