@@ -109,7 +109,7 @@ if [ "$debug" = "true" ]; then
    fi
 
    cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
-   make olddefconfig -C "$source_folder"
+   make oldconfig -C "$source_folder"
 fi
 
 make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
