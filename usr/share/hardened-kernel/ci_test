@@ -28,6 +28,6 @@ pwd || true
 true "TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
 ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
 
-"${MYDIR}/build"
+"${MYDIR}/build" --vm --debug --non-interactive
 
 true "INFO: ${MYDIR}/build success."

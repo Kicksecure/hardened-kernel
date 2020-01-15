@@ -18,6 +18,14 @@ do
       continue_debug="y"
       shift
       ;;
+   --vm)
+      kernel_config="hardened-vm-kernel"
+      shift
+      ;;
+   --host)
+      kernel_config="hardened-host-kernel"
+      shift
+      ;;
    --)
       shift
       break
@@ -31,6 +39,11 @@ do
       ;;
    esac
 done
+
+if [ "$kernel_config" = "" ]; then
+   echo "ERROR: You need to add either --vm or --host parameter." >&2
+   exit 1
+fi
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -48,9 +61,6 @@ fi
 $sudo_tool apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev curl bc kmod cpio
 
 version="4.19.93"
-
-## TODO: do not hardcode and add support for hardened-host-kernel
-kernel_config="hardened-vm-kernel"
 
 ## Location similar to DKMS.
 ## DKMS uses /var/lib/dkms/lkrg/build/.
