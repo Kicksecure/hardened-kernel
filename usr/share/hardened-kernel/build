@@ -80,14 +80,19 @@ cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
 diff "${MYDIR}/${kernel_config}" "$source_folder/.config"
 
 if [ "$debug" = "true" ]; then
-  read -r -p "WARNING: You have configured to build your kernel with debugging enabled. This can severely worsen security. Continue? (y/n) " continue_debug
-  if [ ! "${continue_debug,,}" = "y" ]; then
-    echo "You have selected to not continue. Exiting."
-    exit
-  fi
+   if [ "${continue_debug,,}" = "y" ]; then
+      true
+   else
+      ## read requires stdin. Otherwise would fail if stdin is not connected.
+      read -r -p "WARNING: You have configured to build your kernel with debugging enabled. This can severely worsen security. Continue? (y/n) " continue_debug
+      if [ ! "${continue_debug,,}" = "y" ]; then
+         echo "You have selected to not continue. Exiting."
+         exit
+      fi
+   fi
 
-  cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
-  make olddefconfig
+   cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
+   make olddefconfig
 fi
 
 make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
