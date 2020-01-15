@@ -9,16 +9,23 @@ set -e
 
 while :
 do
-      case $1 in
-      --debug)
-         debug="true"
-         break
-         ;;
-      *)
-         echo "ERROR: Not a valid option."
-         exit 1
-         ;;
-      esac
+   case $1 in
+   --debug)
+      debug="true"
+      shift
+      ;;
+   --)
+      shift
+      break
+      ;;
+   -*)
+      echo "ERROR: Not a valid option." >&2
+      exit 1
+      ;;
+   *)
+      break
+      ;;
+   esac
 done
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -80,7 +87,7 @@ if [ "${debug}" = "true" ]; then
     echo "You have selected to not continue. Exiting."
     exit
   fi
-  
+
   cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
   make olddefconfig
 fi
