@@ -57,9 +57,6 @@ else
    sudo_tool="sudo"
 fi
 
-## TODO: This probably has to be converted to debian/control 'Depends:'.
-$sudo_tool apt-get --no-install-recommends --yes install build-essential libssl-dev libncurses-dev fakeroot libelf-dev bison flex gcc-8-plugin-dev curl bc kmod cpio
-
 version="4.19.93"
 
 ## Location similar to DKMS.

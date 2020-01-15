@@ -13,7 +13,9 @@ Standards-Version: 4.3.0
 
 Package: hardened-kernel
 Architecture: all
-Depends: curl, ${misc:Depends}
+Depends: build-essential, libssl-dev, libncurses-dev, fakeroot,
+ libelf-dev, bison, flex, gcc-8-plugin-dev, curl, bc, kmod, cpio,
+ ${misc:Depends}
 Description: Hardened Kernel for Host and VMs
  This is a hardened kernel configuration for Whonix / Kicksecure.
  hardened-vm-kernel is designed specifically for virtual machines and
