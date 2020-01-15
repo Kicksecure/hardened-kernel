@@ -1,3 +1,165 @@
+commit 22bbdde42b9fd40e170f87b967a02a0e60e8f798
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 09:23:37 2020 -0500
+
+    comment
+
+commit b7d0e8e37b57e8e97b4114241d9aeb428d1bcf62
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 09:22:24 2020 -0500
+
+    fix make olddefconfig for debug kernel
+
+commit 9b3caebc4b05e1d121727c7f2f41ed0dd89c75fa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 09:18:42 2020 -0500
+
+    Build-Depends:
+
+commit 5bad9afcf7acf21a910d9b7e674d30bf88a9962e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 09:01:14 2020 -0500
+
+    convert to Depends:
+
+commit 28b8f5a9eb44d22653704af19ffcfd6170cf8e2c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 08:57:36 2020 -0500
+
+    add switches --vm and --host
+
+commit 9e8208d9174324b0998525c47ffba6bbe655fa3e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 08:13:25 2020 -0500
+
+    add --non-interactive
+
+commit 0883227e291ee38d843a7bd692038abfc6761804
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 08:12:10 2020 -0500
+
+    support running without stdin
+
+commit 28ca957ec6b88c377efa63dc058cafb38494d539
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 08:10:15 2020 -0500
+
+    refactoring
+
+commit bc37b93b5c36a9e1a3c686055ff1d51b54a173e3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 08:01:43 2020 -0500
+
+    CI
+
+commit fea9b0ea29d5e2b08efda699cdc90a16d5216ba4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:17:31 2020 -0500
+
+    change working folders to /var/lib/hardened-kernel/hardened-vm-kernel and /var/lib/hardened-kernel/hardened-host-kernel
+    
+    so /var/lib/hardened-kernel can be restricted with apparmor
+
+commit 844e1f0c9628556946ee268a90ffd3e514f48f88
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:15:51 2020 -0500
+
+    delete working folder and re-create with proper permissions
+
+commit 2f8a264cff9f9444c9460b16224f095c6f5014ce
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:13:00 2020 -0500
+
+    use proper working folder for compilation
+
+commit 0ef6022a8421a53e30852274bc57b7f17bbc3db4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:04:00 2020 -0500
+
+    CI
+
+commit c7ddc25dea5bd5e85223c72ced8291ee0a0fc8fc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 06:55:35 2020 -0500
+
+    fix command line parser
+
+commit d9f5f1915232d94988b5389254b5deb384116b79
+Merge: 84824c9 fe8ce1b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 06:52:22 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit fe8ce1b3629ce06024b789ae16a3be1fed26438b
+Merge: bbfea74 c92ec70
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:57:34 2020 +0000
+
+    Merge pull request #26 from madaidan/debugging
+    
+     Add a way to easily enable debugging options
+
+commit bbfea74ae1c8e792c56a483e0a654a791bd7305c
+Merge: 02dc6e4 35461e0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 07:56:44 2020 +0000
+
+    Merge pull request #25 from madaidan/profiling
+    
+    Disable profiling support
+
+commit c92ec70338663dec73cc650db07b1753c5b95edd
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 14 22:01:29 2020 +0000
+
+    Add warning
+
+commit cf7412ab19ceb2ca917925dc5a9b2f8fb319a817
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 14 21:55:45 2020 +0000
+
+    Add a way to easily enable debugging options
+
+commit bbc68faeb7749afcf88789b0057b6c5cb02f5773
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 14 21:52:02 2020 +0000
+
+    Create debugging-config
+
+commit 35461e05c584a7b6fdfe7308f7c0589a248933bf
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 14 21:29:18 2020 +0000
+
+    Disable profiling support
+
+commit acdcfe1074bb80fd769040bb15b22462a2c046dc
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 14 21:28:05 2020 +0000
+
+    Disable profiling support
+
+commit 02dc6e4d483b3420f2ce50d83aaa2de08855e026
+Merge: 84824c9 b04ac2e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 14 13:41:52 2020 +0000
+
+    Merge pull request #23 from madaidan/nouveau
+    
+    Disable nouveau legacy contexts
+
+commit b04ac2e9bd8260e4a497cebe49b4e66a9e0fe81d
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 13 20:42:17 2020 +0000
+
+    Disable nouveau legacy contexts
+
+commit 84824c97b26181a65893d7a4580bd025d4b48eaf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 11 15:18:13 2020 -0500
+
+    bumped changelog version
+
 commit 6c4cb84139e8d469f0cfbd7b1fffd0eee75456b0
 Merge: 959c126 ece5584
 Author: Patrick Schleizer <adrelanos@riseup.net>
