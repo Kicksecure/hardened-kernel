@@ -57,12 +57,6 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 whoami
 env
 
-if [ "$CI" = "true" ]; then
-   sudo_tool="sudo --non-interactive"
-else
-   sudo_tool="sudo"
-fi
-
 version="4.19.93"
 
 ## Location similar to DKMS.
