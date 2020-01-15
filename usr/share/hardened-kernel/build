@@ -50,7 +50,7 @@ kernel_config="hardened-vm-kernel"
 
 ## Location similar to DKMS.
 ## DKMS uses /var/lib/dkms/lkrg/build/.
-working_folder="/var/lib/${kernel_config}"
+working_folder="/var/lib/hardened-kernel/${kernel_config}"
 rm -r -f "$working_folder"
 mkdir -p "$working_folder"
 chmod o-rwx "$working_folder"
