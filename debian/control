@@ -5,7 +5,10 @@ Source: hardened-kernel
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@riseup.net>
-Build-Depends: debhelper (>= 12)
+## From perspective of CI these are build dependencies.
+Build-Depends: debhelper (>= 12),
+ libssl-dev, libncurses-dev, fakeroot,
+ libelf-dev, bison, flex, gcc-8-plugin-dev, curl, bc, kmod, cpio
 Homepage: https://github.com/Whonix/hardened-kernel
 Vcs-Browser: https://github.com/Whonix/hardened-kernel
 Vcs-Git: https://github.com/Whonix/hardened-kernel.git
@@ -13,7 +16,9 @@ Standards-Version: 4.3.0
 
 Package: hardened-kernel
 Architecture: all
-Depends: build-essential, libssl-dev, libncurses-dev, fakeroot,
+## Required for compilation on user's machine.
+Depends: build-essential,
+ libssl-dev, libncurses-dev, fakeroot,
  libelf-dev, bison, flex, gcc-8-plugin-dev, curl, bc, kmod, cpio,
  ${misc:Depends}
 Description: Hardened Kernel for Host and VMs
