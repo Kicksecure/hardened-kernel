@@ -47,6 +47,12 @@ fi
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+## example MYDIR:
+## /usr/share/hardened-kernel
+
+## example MYDIR:
+## /home/travis/build/Whonix/hardened-kernel/usr/share/hardened-kernel
+
 ## Debugging.
 whoami
 env
