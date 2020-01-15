@@ -7,6 +7,8 @@ set -x
 
 set -e
 
+true "$0: start"
+
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## travis.debian.net does not pass the CI environment variable to docker.
@@ -22,14 +24,32 @@ dpkg --configure -a
 apt-get --yes install sudo virt-what
 
 ## Debugging.
-systemd-detect-virt || true
+#systemd-detect-virt || true
 virt-what || true
-pwd || true
-true "TRAVIS_DEBIAN_BUILD_DIR: $TRAVIS_DEBIAN_BUILD_DIR"
-true "TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
+pwd_output="$(pwd)" || true
+true "$0: TRAVIS_DEBIAN_BUILD_DIR: $TRAVIS_DEBIAN_BUILD_DIR"
+true "$0: TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
+ls "$pwd_output" || true
 ls "$TRAVIS_DEBIAN_BUILD_DIR" || true
 ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
 
 "${MYDIR}/build" --vm --debug --non-interactive
 
 true "$0 INFO: ${MYDIR}/build success."
+
+## TODO: do not hardcode hardened-vm-kernel
+## TODO: remove || true
+## Debugging.
+find /var/lib/hardened-kernel/hardened-vm-kernel -type f || true
+
+true "OK"
+
+## Move to /home/travis/build/ so travis.debian.net script can copy it out of
+## the docker container.
+## TODO: remove || true
+find /var/lib/hardened-kernel/hardened-vm-kernel -type f | xargs mv {} /home/travis/build/ || true
+
+## Debugging.
+ls "/home/travis/build/" || true
+
+true "$0 INFO: OK."
