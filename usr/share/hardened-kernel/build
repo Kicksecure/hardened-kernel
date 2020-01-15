@@ -14,6 +14,10 @@ do
       debug="true"
       shift
       ;;
+   --non-interactive)
+      continue_debug="y"
+      shift
+      ;;
    --)
       shift
       break
