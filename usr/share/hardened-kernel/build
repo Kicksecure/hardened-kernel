@@ -68,8 +68,8 @@ chmod o-rwx "$working_folder"
 
 source_folder="${working_folder}/linux-${version}/"
 
-kernel_source_archive="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-kernel_source_signature="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.sign"
+kernel_source_archive="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+kernel_source_signature="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.sign"
 linux_hardened_patch_archive="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
 linux_hardened_patch_signature="https://github.com/anthraxx/linux-hardened/releases/download/5.4.12.a/linux-hardened-5.4.12.a.patch.sig"
 
