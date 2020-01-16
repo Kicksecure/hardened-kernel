@@ -57,6 +57,7 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 whoami
 env
 
+## TODO: auto detect from files in folder /usr/src/hardened-kernel/files
 version="4.19.93"
 
 ## Location similar to DKMS.
@@ -66,31 +67,22 @@ rm -r -f "$working_folder"
 mkdir -p "$working_folder"
 chmod o-rwx "$working_folder"
 
-source_folder="${working_folder}/linux-${version}/"
-
-kernel_source_archive="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-kernel_source_signature="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.sign"
-linux_hardened_patch_archive="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
-linux_hardened_patch_signature="https://github.com/anthraxx/linux-hardened/releases/download/5.4.12.a/linux-hardened-5.4.12.a.patch.sig"
-
-curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
-
-## TODO: do not use networking as per https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/214
-curl $curl_opts "${kernel_source_archive}" -o "${working_folder}/linux-${version}.tar.xz"
-curl $curl_opts "${linux_hardened_patch_archive}" -o "${working_folder}/linux-hardened-${version}.a.patch"
-
-tar -xf "${working_folder}/linux-${version}.tar.xz" -C "$working_folder"
+source_folder="/usr/src/hardened-kernel/files"
+extracted_linux_kernel_sources_folder="${working_folder}/linux-${version}/"
 
 ## Debugging.
-ls "$working_folder"
 ls "$source_folder"
+ls "$working_folder"
+ls "$extracted_linux_kernel_sources_folder"
 
-cat "${working_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$source_folder"
+tar -xf "${source_folder}/linux-${version}.tar.xz" -C "$working_folder"
 
-cp "${MYDIR}/${kernel_config}" "$source_folder/.config"
+cat "${source_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$extracted_linux_kernel_sources_folder"
+
+cp "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 
 ## Sanity test.
-diff "${MYDIR}/${kernel_config}" "$source_folder/.config"
+diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 
 if [ "$debug" = "true" ]; then
    if [ "${continue_debug,,}" = "y" ]; then
@@ -104,11 +96,11 @@ if [ "$debug" = "true" ]; then
       fi
    fi
 
-   cat "${MYDIR}/debugging-config" >> "$source_folder/.config"
-   make oldconfig -C "$source_folder"
+   cat "${MYDIR}/debugging-config" >> "$extracted_linux_kernel_sources_folder/.config"
+   make oldconfig -C "$extracted_linux_kernel_sources_folder"
 fi
 
-make deb-pkg -j "$(($(nproc) + 1))" -C "$source_folder"
+make deb-pkg -j "$(($(nproc) + 1))" -C "$extracted_linux_kernel_sources_folder"
 
 ## Debugging.
 ls "$working_folder"

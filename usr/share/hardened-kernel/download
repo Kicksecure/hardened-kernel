@@ -1,0 +1,63 @@
+#!/bin/bash
+
+## Copyright (C) 2019 - 2019 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+set -x
+
+set -e
+
+MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+## example MYDIR:
+## /usr/share/hardened-kernel
+
+## example MYDIR:
+## /home/travis/build/Whonix/hardened-kernel/usr/share/hardened-kernel
+
+cd "$MYDIR"
+
+cd ..
+cd ..
+cd ..
+
+cd usr
+cd src
+cd hardened-kernel
+cd files
+
+## example pwd:
+## /usr/src/hardened-kernel/files
+
+## example pwd:
+## /home/user/Whonix/packages/hardened-kernel/usr/src/hardened-kernel/files
+
+if ! echo "$(pwd)" | grep -q /usr/src/hardened-kernel/files ; then
+   echo "ERROR: Bug. Wrong folder." >&2
+   exit 1
+fi
+
+## Quote https://git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/tree/get-verified-tarball
+# Before we verify the developer signature, we make sure that the
+# tarball matches what is on the kernel.org master. This avoids
+# CDN cache poisoning that could, in theory, use vulnerabilities in
+# the XZ binary to alter the verification process or compromise the
+# system performing the verification.
+
+version="4.19.93"
+
+kernel_sha256sums_file="https://kernel.org/pub/linux/kernel/v4.x/sha256sums.asc"
+kernel_source_signature="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.sign"
+kernel_source_archive="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+linux_hardened_patch_signature="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch.sig"
+linux_hardened_patch_archive="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
+
+curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
+
+curl $curl_opts "${kernel_sha256sums_file}" -o "./sha256sums.asc"
+curl $curl_opts "${kernel_source_signature}" -o "./linux-${version}.tar.sign"
+curl $curl_opts "${kernel_source_archive}" -o "./linux-${version}.tar.xz"
+curl $curl_opts "${linux_hardened_patch_signature}" -o "./linux-hardened-${version}.a.patch.sig"
+curl $curl_opts "${linux_hardened_patch_archive}" -o "./linux-hardened-${version}.a.patch"
+
+true "OK"
