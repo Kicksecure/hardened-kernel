@@ -72,6 +72,10 @@ mkdir -p "$working_folder"
 chmod o-rwx "$working_folder"
 
 source_folder="/usr/src/hardened-kernel/files"
+
+## TODO
+mkdir -p "$source_folder"
+
 extracted_linux_kernel_sources_folder="${working_folder}/linux-${version}/"
 
 ## Debugging.
