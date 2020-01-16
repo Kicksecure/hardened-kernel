@@ -17,6 +17,9 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 mkdir -p /usr/src/hardened-kernel/files
 
+## TODO
+cd /usr/src/hardened-kernel/files
+
 ## Quote https://git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/tree/get-verified-tarball
 # Before we verify the developer signature, we make sure that the
 # tarball matches what is on the kernel.org master. This avoids
