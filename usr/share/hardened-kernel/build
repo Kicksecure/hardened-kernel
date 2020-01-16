@@ -57,6 +57,10 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 whoami
 env
 
+## TODO: do not use networking as per https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/214
+## https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/267
+"$MYDIR/download"
+
 ## TODO: auto detect from files in folder /usr/src/hardened-kernel/files
 version="4.19.93"
 
