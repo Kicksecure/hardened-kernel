@@ -50,7 +50,7 @@ true "OK"
 ## XXX: using find in for might not be safe but good enough for CI.
 for file_name in $(find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1) ; do
    mv "$file_name" /home/travis/build/ || true
-fi
+done
 
 ## Debugging.
 ls "/home/travis/build/" || true
