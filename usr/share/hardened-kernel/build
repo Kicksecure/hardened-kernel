@@ -68,14 +68,14 @@ chmod o-rwx "$working_folder"
 
 source_folder="${working_folder}/linux-${version}/"
 
-kernel_source="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-linux_hardened_patch="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
+kernel_source_archive="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+linux_hardened_patch_archive="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
 
 curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
 
 ## TODO: do not use networking as per https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/214
-curl $curl_opts "${kernel_source}" -o "${working_folder}/linux-${version}.tar.xz"
-curl $curl_opts "${linux_hardened_patch}" -o "${working_folder}/linux-hardened-${version}.a.patch"
+curl $curl_opts "${kernel_source_archive}" -o "${working_folder}/linux-${version}.tar.xz"
+curl $curl_opts "${linux_hardened_patch_archive}" -o "${working_folder}/linux-hardened-${version}.a.patch"
 
 tar -xf "${working_folder}/linux-${version}.tar.xz" -C "$working_folder"
 
