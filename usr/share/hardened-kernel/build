@@ -81,10 +81,12 @@ extracted_linux_kernel_sources_folder="${working_folder}/linux-${version}/"
 ## Debugging.
 ls "$source_folder"
 ls "$working_folder"
-ls "$extracted_linux_kernel_sources_folder"
 
 ## TODO: tar vs tar.xz
 tar -xf "${source_folder}/linux-${version}.tar.xz" -C "$working_folder"
+
+## Debugging.
+ls "$extracted_linux_kernel_sources_folder"
 
 cat "${source_folder}/linux-hardened-${version}.a.patch" | patch --silent -p1 -d "$extracted_linux_kernel_sources_folder"
 
