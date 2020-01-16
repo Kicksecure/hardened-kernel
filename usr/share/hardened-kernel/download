@@ -15,29 +15,7 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ## example MYDIR:
 ## /home/travis/build/Whonix/hardened-kernel/usr/share/hardened-kernel
 
-cd "$MYDIR"
-
-cd ..
-cd ..
-cd ..
-
-mkdir -p usr/src/hardened-kernel/files
-
-cd usr
-cd src
-cd hardened-kernel
-cd files
-
-## example pwd:
-## /usr/src/hardened-kernel/files
-
-## example pwd:
-## /home/user/Whonix/packages/hardened-kernel/usr/src/hardened-kernel/files
-
-if ! echo "$(pwd)" | grep -q /usr/src/hardened-kernel/files ; then
-   echo "ERROR: Bug. Wrong folder." >&2
-   exit 1
-fi
+mkdir -p /usr/src/hardened-kernel/files
 
 ## Quote https://git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/tree/get-verified-tarball
 # Before we verify the developer signature, we make sure that the
