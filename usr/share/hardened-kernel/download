@@ -61,3 +61,11 @@ curl $curl_opts "${linux_hardened_patch_signature}" -o "./linux-hardened-${versi
 curl $curl_opts "${linux_hardened_patch_archive}" -o "./linux-hardened-${version}.a.patch"
 
 true "OK"
+
+## cd /home/user/Whonix/packages/hardened-kernel/usr/src/hardened-kernel/files
+## gpg --verify sha256sums.asc
+## sha256sum --ignore-missing --check sha256sums.asc
+## unxz linux-4.19.93.tar.xz
+## rm linux-4.19.93.tar.xz
+## gpg --verify linux-4.19.93.tar.sign
+## gpg --verify linux-hardened-4.19.93.a.patch.sig
