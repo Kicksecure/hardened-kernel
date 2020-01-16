@@ -40,14 +40,14 @@ true "$0 INFO: ${MYDIR}/build success."
 ## TODO: do not hardcode hardened-vm-kernel
 ## TODO: remove || true
 ## Debugging.
-find /var/lib/hardened-kernel/hardened-vm-kernel -type f || true
+find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1 || true
 
 true "OK"
 
 ## Move to /home/travis/build/ so travis.debian.net script can copy it out of
 ## the docker container.
 ## TODO: remove || true
-find /var/lib/hardened-kernel/hardened-vm-kernel -type f | xargs mv {} /home/travis/build/ || true
+find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1 | xargs mv {} /home/travis/build/ || true
 
 ## Debugging.
 ls "/home/travis/build/" || true
