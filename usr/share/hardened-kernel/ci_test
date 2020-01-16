@@ -27,11 +27,11 @@ apt-get --yes install sudo virt-what
 #systemd-detect-virt || true
 virt-what || true
 pwd_output="$(pwd)" || true
-true "$0: TRAVIS_DEBIAN_BUILD_DIR: $TRAVIS_DEBIAN_BUILD_DIR"
-true "$0: TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
 ls "$pwd_output" || true
-ls "$TRAVIS_DEBIAN_BUILD_DIR" || true
-ls "$TRAVIS_DEBIAN_TARGET_DIR" || true
+
+## The environment variables are not set here.
+#true "$0: TRAVIS_DEBIAN_BUILD_DIR: $TRAVIS_DEBIAN_BUILD_DIR"
+#true "$0: TRAVIS_DEBIAN_TARGET_DIR: $TRAVIS_DEBIAN_TARGET_DIR"
 
 "${MYDIR}/build" --vm --debug --non-interactive
 
