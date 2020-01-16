@@ -21,6 +21,8 @@ cd ..
 cd ..
 cd ..
 
+mkdir -p usr/src/hardened-kernel/files
+
 cd usr
 cd src
 cd hardened-kernel
