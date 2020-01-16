@@ -47,7 +47,10 @@ true "OK"
 ## Move to /home/travis/build/ so travis.debian.net script can copy it out of
 ## the docker container.
 ## TODO: remove || true
-find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1 | xargs mv {} /home/travis/build/ || true
+## XXX: using find in for might not be safe but good enough for CI.
+for file_name in $(find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1) ; do
+   mv "$file_name" /home/travis/build/ || true
+fi
 
 ## Debugging.
 ls "/home/travis/build/" || true
