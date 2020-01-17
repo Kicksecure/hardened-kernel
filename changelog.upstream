@@ -1,3 +1,241 @@
+commit 0c48b639bb90e2697e46f148954bcb30afb5cf34
+Merge: dae2b22 b3c4ab5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 03:09:02 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit dae2b22330f056aebc1960dcc7565fb28b619a0f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 03:06:27 2020 -0500
+
+    fix
+
+commit b3c4ab5c0985316aa3301ef547b0c1323997ba65
+Merge: 6175e12 3904c47
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 07:29:29 2020 +0000
+
+    Merge pull request #28 from madaidan/reset_attack
+    
+    Enable reset attack mitigation in host kernel
+
+commit 6175e12e2326fb984a408536b9573e4835bb6b29
+Merge: 68a0a29 2dc5e3d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 07:29:14 2020 +0000
+
+    Merge pull request #29 from madaidan/devmem
+    
+    Disable /dev/mem
+
+commit 2dc5e3d969ed11f07be14fb0879fe8508319b3b0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 16 22:49:20 2020 +0000
+
+    Disable /dev/mem
+
+commit 558aeea28db3967b415c7ee207795e9874667e87
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 16 22:48:52 2020 +0000
+
+    Disable /dev/mem
+
+commit 3904c472f93973f524c6c7e8c2085763f3f36d0e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Jan 16 22:10:46 2020 +0000
+
+    Enable reset attack mitigation
+
+commit 68a0a2996bed475e74abdbd8084328bb6207db33
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 09:38:35 2020 -0500
+
+    fix
+
+commit 2ba3ba2a461dd51a56048abe77dccec6303aab56
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 09:13:06 2020 -0500
+
+    fix
+
+commit de9624ac7c0565e3e81ba61c510aaadb4f8dc3b7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 09:11:34 2020 -0500
+
+    Sanity tests.
+
+commit bde41633305382ecaec26c4af7b388773537dd9d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 09:02:52 2020 -0500
+
+    fix
+
+commit 0f7b02febc1a9bb0c8cea31047616a2e69478e5d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 08:57:44 2020 -0500
+
+    fix
+
+commit 41dd3c304c8aeb409847ef05988317ea10132a0f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 08:21:39 2020 -0500
+
+    fix
+
+commit 9c31b80f14b7989e17e86b505ba938d3ca30030d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 07:37:18 2020 -0500
+
+    back to downloading on user's machine for now
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/267
+
+commit 5fb98216b5535a63bbf0795247c714ad0efdcf64
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 07:11:06 2020 -0500
+
+    comment
+
+commit d5805f1df6c496284c4cc9e7aa70f5dbc20df5be
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 07:10:24 2020 -0500
+
+    CI
+
+commit d6cd234162e59265cb75db9d2105f472c44d653e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 06:09:08 2020 -0500
+
+    comments
+
+commit 29f3a927e9672c1e8f88847d69c87bbedb28e8ac
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 06:05:50 2020 -0500
+
+    no more download on user's machine
+    
+    add download helper script for developers
+
+commit 9519547d1b5ddd1ea0b99e2eb72adfd93bc75629
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:53:53 2020 -0500
+
+    add linux and linux-hardened signing keys
+
+commit 8c1ccee4347f04cf585cc35cf22fb4b7311c9f1b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:47:47 2020 -0500
+
+    CI
+
+commit 6e62da6a300d72b0e650a6a58cd78977b4cc47f9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:14:37 2020 -0500
+
+    remove ".cdn" from kernel download link since broken
+
+commit 8b73f7626fdd3fa16d431f74c79204039eb49f57
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:14:10 2020 -0500
+
+    add signature links
+
+commit e0b8a994c30969beb4c38e1001bf72dd879a0df1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:06:50 2020 -0500
+
+    refactoring
+
+commit 8ce52796fac22fd36a2c549f8e19a31eceafa0c9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:03:45 2020 -0500
+
+    CI
+
+commit f41d29652d02e3c6801a1d945bff48c6ef100af0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 16 05:00:58 2020 -0500
+
+    CI
+
+commit e24a848faf0a4420d68f16cf092e8ff9bf0ce34d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 16:40:15 2020 -0500
+
+    CI
+
+commit 96bac53efb41a5ae1f51a767d210d2b7cabe3860
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 16:20:54 2020 -0500
+
+    CI
+
+commit 50e37377bb43bdee3daa8ea938749eafb505995a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 16:17:15 2020 -0500
+
+    cleanup
+
+commit 818d70334507af908dc2e09fd592b93c57938b53
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 16:15:54 2020 -0500
+
+    CI
+
+commit 4e045bb8605d52231f2b5e020153e12ebd6d8369
+Merge: 910f769 7dd5270
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 16:07:28 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7dd527086e010ad6a187617bb626a4e83eb2bb84
+Merge: 3981032 517c5fc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 21:07:01 2020 +0000
+
+    Merge pull request #24 from madaidan/panic_on_oops
+    
+    Enable CONFIG_PANIC_ON_OOPS for VM kernel
+
+commit 910f7699e56116f3bd7d53b010a4c4a3725ef586
+Merge: 907d143 3981032
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 15:53:15 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3981032a745ace0d1a5bcb3d8b9ea4145eeb52f7
+Merge: 5ad7d5c 1a4a0e1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 20:51:17 2020 +0000
+
+    Merge pull request #22 from madaidan/binfmt_misc
+    
+    Disable binfmt_misc
+
+commit 5ad7d5c33bf47898ff3b4bd4560a84de5924ebcf
+Merge: 907d143 a092381
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 20:50:54 2020 +0000
+
+    Merge pull request #27 from madaidan/oldconfig
+    
+    Fix debug build
+
+commit a092381aaadda584635ed63ba5dfc630321838e0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Jan 15 20:34:39 2020 +0000
+
+    Should be oldconfig, not olddefconfig
+
+commit 907d1434a3f5e8ad779884a9423855455459e841
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 15 11:03:36 2020 -0500
+
+    bumped changelog version
+
 commit 22bbdde42b9fd40e170f87b967a02a0e60e8f798
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 09:23:37 2020 -0500
@@ -148,11 +386,29 @@ Date:   Tue Jan 14 13:41:52 2020 +0000
     
     Disable nouveau legacy contexts
 
+commit 517c5fc7863bc7103d8d6af05a65befb858431ed
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 13 21:02:01 2020 +0000
+
+    Enable CONFIG_PANIC_ON_OOPS
+
 commit b04ac2e9bd8260e4a497cebe49b4e66a9e0fe81d
 Author: madaidan <50278627+madaidan@users.noreply.github.com>
 Date:   Mon Jan 13 20:42:17 2020 +0000
 
     Disable nouveau legacy contexts
+
+commit 1a4a0e173129f488d5e42e4a4ed0dde7aa98aab4
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 13 20:33:14 2020 +0000
+
+    Disable binfmt_misc
+
+commit aba4485132ece8497caa6d0a3b3d8411dae1093b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 13 20:32:52 2020 +0000
+
+    Disable binfmt_misc
 
 commit 84824c97b26181a65893d7a4580bd025d4b48eaf
 Author: Patrick Schleizer <adrelanos@riseup.net>
