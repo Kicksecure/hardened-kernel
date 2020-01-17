@@ -84,7 +84,7 @@ ls "$working_folder"
 
 ## Sanity tests.
 test -r "${source_folder}/linux-${version}.tar.xz"
-test -r "$extracted_linux_kernel_sources_folder"
+test -r "${source_folder}/linux-hardened-${version}.a.patch"
 
 ## TODO: tar vs tar.xz
 tar -xf "${source_folder}/linux-${version}.tar.xz" -C "$working_folder"
