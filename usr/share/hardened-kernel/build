@@ -65,7 +65,7 @@ env
 version="4.19.93"
 
 ## Location similar to DKMS.
-## DKMS uses /var/lib/dkms/lkrg/build/.
+## DKMS uses /var/lib/dkms/pkg-name/build/.
 working_folder="/var/lib/hardened-kernel/${kernel_config}"
 rm -r -f "$working_folder"
 mkdir -p "$working_folder"
@@ -86,7 +86,6 @@ ls "$working_folder"
 test -r "${source_folder}/linux-${version}.tar.xz"
 test -r "${source_folder}/linux-hardened-${version}.a.patch"
 
-## TODO: tar vs tar.xz
 tar -xf "${source_folder}/linux-${version}.tar.xz" -C "$working_folder"
 
 ## Debugging.
