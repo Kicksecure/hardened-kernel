@@ -20,4 +20,5 @@ env:
   #- TRAVIS_DEBIAN_AUTOPKGTEST=true
   - TRAVIS_DEBIAN_NETWORK_ENABLED=true
   - TRAVIS_DEBIAN_EXTRA_PACKAGES="lintian sudo"
+  - TRAVIS_DEBIAN_BUILD_DIR=/home/travis/build
   - TRAVIS_DEBIAN_TARGET_DIR=/home/travis/kernel-build-result
