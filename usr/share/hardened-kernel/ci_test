@@ -38,10 +38,11 @@ ls "$pwd_output" || true
 true "$0 INFO: ${MYDIR}/build success."
 
 ## TODO: do not hardcode hardened-vm-kernel
+
 ## Debugging.
 find /var/lib/hardened-kernel/hardened-vm-kernel -type f -maxdepth 1
 
-true "OK"
+true "$0 INFO: OK."
 
 ## Move to /home/travis/build/ so travis.debian.net script can copy it out of
 ## the docker container.
@@ -52,5 +53,8 @@ done
 
 ## Debugging.
 ls "/home/travis/build/" || true
+
+## Try install newly built kernel.
+dpkg -i "/home/travis/build/"*".deb" || true
 
 true "$0 INFO: OK. End."
