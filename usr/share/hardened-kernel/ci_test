@@ -55,4 +55,4 @@ done
 ## Debugging.
 ls "/home/travis/build/" || true
 
-true "$0 INFO: OK."
+true "$0 INFO: OK. End."
