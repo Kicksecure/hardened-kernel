@@ -59,6 +59,6 @@ ls "/home/travis/build/" || true
 lintian --suppress-tags testsuite-autopkgtest-missing --quiet --pedantic --info --display-info "/home/travis/build/"*".changes" || true
 
 ## Try install newly built kernel.
-dpkg -i "/home/travis/build/"*".deb" || true
+dpkg -i "/home/travis/build/"*".deb"
 
 true "$0 INFO: OK. End."
