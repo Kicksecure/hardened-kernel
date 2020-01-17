@@ -21,13 +21,14 @@ apt-get update
 apt-get --yes dist-upgrade
 dpkg --configure -a
 
-apt-get --yes install sudo virt-what
+apt-get --yes install sudo virt-what lintian
 
 ## Debugging.
 #systemd-detect-virt || true
 virt-what || true
 pwd_output="$(pwd)" || true
 ls "$pwd_output" || true
+ls /home || true
 
 ## The environment variables are not set here.
 #true "$0: TRAVIS_DEBIAN_BUILD_DIR: $TRAVIS_DEBIAN_BUILD_DIR"
@@ -53,6 +54,9 @@ done
 
 ## Debugging.
 ls "/home/travis/build/" || true
+
+## Try lintian newly built kernel.
+lintian --suppress-tags testsuite-autopkgtest-missing --quiet --pedantic --info --display-info "/home/travis/build/"*".changes" || true
 
 ## Try install newly built kernel.
 dpkg -i "/home/travis/build/"*".deb" || true
