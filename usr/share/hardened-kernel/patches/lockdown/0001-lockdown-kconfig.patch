@@ -7,7 +7,7 @@ index d9aa521..01fc608 100644
  	  specify an empty string here (i.e. "").
 
 +config SECURITY_LOCKDOWN
-+	string "Enable kernel lockdown"
++	bool "Enable kernel lockdown"
 +	default y
 +	help
 +	  Enables kernel lockdown which disables any feature that
