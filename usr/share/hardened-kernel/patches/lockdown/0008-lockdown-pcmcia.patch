@@ -14,7 +14,7 @@ index ac0672b..7c89c51 100644
  	struct pcmcia_socket *s;
  	int error;
  
-+	if (lockdown_kernel)
++	if (kernel_lockdown)
 +		return -EPERM;
 +
  	s = to_socket(container_of(kobj, struct device, kobj));

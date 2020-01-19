@@ -16,7 +16,7 @@ index 0fe1c87..e6a02e7 100644
  		return -EINVAL;
 -	if (turn_on && !capable(CAP_SYS_RAWIO))
 +	if (turn_on && !capable(CAP_SYS_RAWIO) ||
-+			lockdown_kernel)
++			kernel_lockdown)
  		return -EPERM;
  
  	/*
@@ -26,7 +26,7 @@ index 0fe1c87..e6a02e7 100644
  	if (level > old) {
 -		if (!capable(CAP_SYS_RAWIO))
 +		if (!capable(CAP_SYS_RAWIO) ||
-+		    lockdown_kernel)
++		    kernel_lockdown)
  			return -EPERM;
  	}
  	regs->flags = (regs->flags & ~X86_EFLAGS_IOPL) |
