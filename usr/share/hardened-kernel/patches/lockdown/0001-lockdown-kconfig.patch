@@ -1,0 +1,33 @@
+diff --git a/security/Kconfig b/security/Kconfig
+index d9aa521..01fc608 100644
+--- a/security/Kconfig
++++ b/security/Kconfig
+@@ -230,6 +230,13 @@ config STATIC_USERMODEHELPER_PATH
+ 	  If you wish for all usermode helper programs to be disabled,
+ 	  specify an empty string here (i.e. "").
+
++config SECURITY_LOCKDOWN
++	string "Enable kernel lockdown"
++	default y
++	help
++	  Enables kernel lockdown which disables any feature that
++	  userspace can abuse to compromise the kernel.
++
+ source security/selinux/Kconfig
+ source security/smack/Kconfig
+ source security/tomoyo/Kconfig
+diff --git a/include/linux/security.h b/include/linux/security.h
+index 75f4156..9c1171a 100644
+--- a/include/linux/security.h
++++ b/include/linux/security.h
+@@ -402,6 +402,10 @@ void security_inode_invalidate_secctx(struct inode *inode);
+ int security_inode_notifysecctx(struct inode *inode, void *ctx, u32 ctxlen);
+ int security_inode_setsecctx(struct dentry *dentry, void *ctx, u32 ctxlen);
+ int security_inode_getsecctx(struct inode *inode, void **ctx, u32 *ctxlen);
++
++/* Kernel lockdown */
++int kernel_lockdown = IS_ENABLED(CONFIG_SECURITY_LOCKDOWN);
++
+ #else /* CONFIG_SECURITY */
+ struct security_mnt_opts {
+ };

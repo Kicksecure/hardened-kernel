@@ -1,0 +1,32 @@
+diff --git a/arch/x86/kernel/ioport.c b/arch/x86/kernel/ioport.c
+index 0fe1c87..e6a02e7 100644
+--- a/arch/x86/kernel/ioport.c
++++ b/arch/x86/kernel/ioport.c
+@@ -11,6 +11,7 @@
+ #include <linux/errno.h>
+ #include <linux/types.h>
+ #include <linux/ioport.h>
++#include <linux/security.h>
+ #include <linux/smp.h>
+ #include <linux/stddef.h>
+ #include <linux/slab.h>
+@@ -31,7 +32,8 @@ long ksys_ioperm(unsigned long from, unsigned long num, int turn_on)
+ 
+ 	if ((from + num <= from) || (from + num > IO_BITMAP_BITS))
+ 		return -EINVAL;
+-	if (turn_on && !capable(CAP_SYS_RAWIO))
++	if (turn_on && !capable(CAP_SYS_RAWIO) ||
++			lockdown_kernel)
+ 		return -EPERM;
+ 
+ 	/*
+@@ -126,7 +128,8 @@ SYSCALL_DEFINE1(iopl, unsigned int, level)
+ 		return -EINVAL;
+ 	/* Trying to gain more privileges? */
+ 	if (level > old) {
+-		if (!capable(CAP_SYS_RAWIO))
++		if (!capable(CAP_SYS_RAWIO) ||
++		    lockdown_kernel)
+ 			return -EPERM;
+ 	}
+ 	regs->flags = (regs->flags & ~X86_EFLAGS_IOPL) |

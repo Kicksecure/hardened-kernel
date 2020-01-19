@@ -1,0 +1,22 @@
+diff --git a/drivers/pcmcia/cistpl.c b/drivers/pcmcia/cistpl.c
+index ac0672b..7c89c51 100644
+--- a/drivers/pcmcia/cistpl.c
++++ b/drivers/pcmcia/cistpl.c
+@@ -24,6 +24,7 @@
+ #include <linux/pci.h>
+ #include <linux/ioport.h>
+ #include <linux/io.h>
++#include <linux/security.h>
+ #include <asm/byteorder.h>
+ #include <asm/unaligned.h>
+ 
+@@ -1578,6 +1579,9 @@ static ssize_t pccard_store_cis(struct file *filp, struct kobject *kobj,
+ 	struct pcmcia_socket *s;
+ 	int error;
+ 
++	if (lockdown_kernel)
++		return -EPERM;
++
+ 	s = to_socket(container_of(kobj, struct device, kobj));
+ 
+ 	if (off)
