@@ -1,3 +1,151 @@
+commit f87664993ed116dce842dee1a31979412a0524ab
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 08:41:17 2020 -0500
+
+    CI
+
+commit 28de0398c17edca0afcc6d77eafe0951ed6bc4be
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 04:54:45 2020 -0500
+
+    CI
+
+commit cb225309b7919bdf6118cd529a2bb4129c667bbe
+Merge: ff096ff 86c5f51
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 04:54:21 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 86c5f51a7bb0cdeb8aeb643f223a5d4ea5114b3b
+Merge: 1b1d4ca b8ff2df
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 09:40:52 2020 +0000
+
+    Merge pull request #32 from madaidan/error_injection
+    
+    Disable notifier error injection
+
+commit 1b1d4ca42c135d7852652328c30ed8628624d070
+Merge: ff096ff ab1e995
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 09:32:05 2020 +0000
+
+    Merge pull request #33 from madaidan/debug_virtual
+    
+    Enable sanity checks in virtual to page code
+
+commit ab1e995afedbeef65bd2db5ca95caf57c6bcb467
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 18 18:39:03 2020 +0000
+
+    Enable sanity checks in virtual to page code
+
+commit 1c87d6ff44f98757071bd91e033040274828514e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 18 18:38:12 2020 +0000
+
+    Enable sanity checks in virtual to page code
+
+commit b8ff2df2dbb8933e79acbbddfc3e2e22b27a8a28
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 18 18:23:16 2020 +0000
+
+    Enable notifier error injection in debug config
+
+commit 286e63818a6514691577d4b0d5d6046ec585da7e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 18 18:21:40 2020 +0000
+
+     Disable notifier error injection
+
+commit b9d1b05374a561ac0d6e8d9468c94d729ea33938
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Jan 18 18:20:14 2020 +0000
+
+    Disable notifier error injection
+
+commit ff096ff1615efe7f2ced98cc96f92eb723082fb8
+Merge: 8862115 bbf425f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 18 05:53:49 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit bbf425fd3a728001fa35d482ab11b6fc114ce0b4
+Merge: 8862115 31ba7a1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 18 10:52:54 2020 +0000
+
+    Merge pull request #31 from madaidan/bpf-syscall
+    
+    Disable bpf() syscall
+
+commit 31ba7a1e8e8e8c475a6f43b632e66bc128ed7296
+Merge: 2015690 8862115
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jan 18 10:52:06 2020 +0000
+
+    Merge branch 'master' into bpf-syscall
+
+commit 8862115a87bc382f680a2aacfe3427f51b2ffd49
+Merge: f1bbad2 f09547c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 12:43:14 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2015690bf7e0e7170f87f6d0b08df6d85166e99b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 17 17:43:09 2020 +0000
+
+    Enable bpf() syscall in debug config
+
+commit d069ee8e13f166f80323c80262d199059a42cbe4
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 17 17:41:13 2020 +0000
+
+    Disable bpf() syscall
+
+commit e094ab57ebf08087f5037d351ce119158f7a3f5f
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 17 17:39:53 2020 +0000
+
+    Disable bpf() syscall
+
+commit f09547c50e6c93c79a88deb7391ffdffd48afa8d
+Merge: 2c4ffd3 32bcc9b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 17:33:57 2020 +0000
+
+    Merge pull request #30 from madaidan/debug-config
+    
+    Enable /dev/mem and disable panic_on_oops in debugging config
+
+commit f1bbad209a0106b00e94fcb81efed24331c7937e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 12:08:42 2020 -0500
+
+    .
+
+commit 32bcc9b73b76ca2dda3cc6dc415176de9e735967
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jan 17 16:49:22 2020 +0000
+
+    Enable /dev/mem and disable panic_on_oops
+
+commit 57afcc0823b0f40b6006a5a7ac42a8d595577fef
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 11:47:49 2020 -0500
+
+    CI
+
+commit 2c4ffd3975d29e651fe175b6ea1118751c0d3000
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Jan 17 11:46:23 2020 -0500
+
+    bumped changelog version
+
 commit b170792328108bed72f6d4f90a7fcdccded93900
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 06:43:46 2020 -0500
