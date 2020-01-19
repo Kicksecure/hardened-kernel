@@ -17,7 +17,7 @@ index d9aa521..01fc608 100644
  source security/smack/Kconfig
  source security/tomoyo/Kconfig
 diff --git a/include/linux/security.h b/include/linux/security.h
-index 75f4156..9c1171a 100644
+index 75f4156..a591b90 100644
 --- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -402,6 +402,10 @@ void security_inode_invalidate_secctx(struct inode *inode);
@@ -26,8 +26,28 @@ index 75f4156..9c1171a 100644
  int security_inode_getsecctx(struct inode *inode, void **ctx, u32 *ctxlen);
 +
 +/* Kernel lockdown */
-+int kernel_lockdown = IS_ENABLED(CONFIG_SECURITY_LOCKDOWN);
++extern int kernel_lockdown;
 +
  #else /* CONFIG_SECURITY */
  struct security_mnt_opts {
  };
+diff --git a/security/Makefile b/security/Makefile
+index 4d2d378..ccf18e1 100644
+--- a/security/Makefile
++++ b/security/Makefile
+@@ -30,3 +30,6 @@ obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
+ # Object integrity file lists
+ subdir-$(CONFIG_INTEGRITY)		+= integrity
+ obj-$(CONFIG_INTEGRITY)			+= integrity/
++
++# Kernel lockdown
++obj-$(CONFIG_SECURITY_LOCKDOWN)		+= lockdown.o
+diff --git a/security/lockdown.c b/security/lockdown.c
+new file mode 100644
+index 0000000..eb2d10f
+--- /dev/null
++++ b/security/lockdown.c
+@@ -0,0 +1,3 @@
++#include <linux/security.h>
++
++int __ro_after_init kernel_lockdown = IS_ENABLED(CONFIG_SECURITY_LOCKDOWN);
