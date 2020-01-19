@@ -19,26 +19,7 @@ Only useful for the host kernel.
 EFI variable, which gives arbitrary code execution in ring 0. Prevent
 that when the kernel is locked down.
 
-# 0003-lockdown-acpi_rsdp:
-
-Ignore the acpi_rsdp kernel parameter.
-
-Not implemented yet.
-
-> This option allows userspace to pass the RSDP address to the kernel, which
-makes it possible for a user to modify the workings of hardware. Reject
-the option when the kernel is locked down. This requires some reworking
-of the existing RSDP command line logic, since the early boot code also
-makes use of a command-line passed RSDP when locating the SRAT table
-before the lockdown code has been initialised. This is achieved by
-separating the command line RSDP path in the early boot code from the
-generic RSDP path, and then copying the command line RSDP into boot
-params in the kernel proper if lockdown is not enabled. If lockdown is
-enabled and an RSDP is provided on the command line, this will only be
-used when parsing SRAT (which shouldn't permit kernel code execution)
-and will be ignored in the rest of the kernel.
-
-# 0004-lockdown-pci-bar-access.patch:
+# 0003-lockdown-pci-bar-access.patch:
 
 Locks down PCI BAR access.
 
@@ -48,7 +29,7 @@ allowing them to circumvent disabled module loading or module signing.
 Default to paranoid - in future we can potentially relax this for
 sufficiently IOMMU-isolated devices.
 
-# 0005-lockdown-perf.patch:
+# 0004-lockdown-perf.patch:
 
 Locks down perf.
 
@@ -61,7 +42,7 @@ linux-hardened.
 > Disallow the use of certain perf facilities that might allow userspace to
 access kernel data.
 
-# 0006-lockdown-tiocsserial.patch
+# 0005-lockdown-tiocsserial.patch
 
 Locks down TIOCSSERIAL.
 
@@ -70,7 +51,7 @@ settings on a serial port.  This only appears to be an issue for the serial
 drivers that use the core serial code.  All other drivers seem to either
 ignore attempts to change port/irq or give an error.
 
-# 0007-lockdown-ioport.patch:
+# 0006-lockdown-ioport.patch:
 
 Locks down IO port access (specifically, the ioperm() and iopl() syscalls).
 
@@ -82,7 +63,7 @@ DMA, so lock it down by default.
 > This also implicitly locks down the KDADDIO, KDDELIO, KDENABIO and
 KDDISABIO console ioctls.
 
-# 0008-lockdown-pcmcia.patch:
+# 0007-lockdown-pcmcia.patch:
 
 Locks down PCMCIA.
 
@@ -91,7 +72,7 @@ Only useful for the host kernel.
 > Prohibit replacement of the PCMCIA Card Information Structure when the
 kernel is locked down.
 
-# 0009-lockdown-module-params.patch:
+# 0008-lockdown-module-params.patch:
 
 Locks down module parameters.
 
