@@ -57,7 +57,36 @@ ls "/home/travis/build/" || true
 
 ## Try lintian newly built kernel.
 lintian \
-   --suppress-tags testsuite-autopkgtest-missing \
+   --suppress-tags \
+   testsuite-autopkgtest-missing,\
+   changed-by-address-is-root-user,\
+   changed-by-address-malformed,\
+   debian-control-has-obsolete-dbg-package,\
+   license-problem-gfdl-invariants-empty,\
+   source-contains-prebuilt-binary,\
+   package-does-not-install-examples,\
+   license-problem-gfdl-invariants,\
+   package-does-not-use-debhelper-or-cdbs,\
+   missing-debian-source-format,\
+   dbg-package-missing-depends,\
+   direct-changes-in-diff-but-no-patch-system,\
+   debian-rules-missing-required-target,\
+   debian-rules-missing-recommended-target,\
+   debian-rules-missing-recommended-target,\
+   no-dep5-copyright,\
+   no-standards-version-field,\
+   debian-watch-file-is-missing,\
+   spelling-error-in-binary,\
+   new-package-should-close-itp-bug,\
+   extended-description-is-probably-too-short,\
+   maintainer-address-is-root-user,\
+   maintainer-address-malformed,\
+   hardening-no-fortify-functions,\
+   hardening-no-bindnow,\
+   unstripped-binary-or-object,\
+   debian-changelog-file-contains-invalid-email-address,\
+   package-contains-vcs-control-file,\
+   package-contains-documentation-outside-usr-share-do,\
    --quiet \
    --pedantic \
    --info \
