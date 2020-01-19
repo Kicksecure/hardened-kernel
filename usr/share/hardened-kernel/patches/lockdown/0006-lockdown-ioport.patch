@@ -15,8 +15,8 @@ index 0fe1c87..e6a02e7 100644
  	if ((from + num <= from) || (from + num > IO_BITMAP_BITS))
  		return -EINVAL;
 -	if (turn_on && !capable(CAP_SYS_RAWIO))
-+	if (turn_on && !capable(CAP_SYS_RAWIO) ||
-+			kernel_lockdown)
++	if (turn_on && (!capable(CAP_SYS_RAWIO) ||
++			kernel_lockdown))
  		return -EPERM;
  
  	/*
