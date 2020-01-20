@@ -111,6 +111,9 @@ if [ "$debug" = "true" ]; then
    fi
 
    cat "${MYDIR}/debugging-config" >> "$extracted_linux_kernel_sources_folder/.config"
+   if [ "${kernel_config}" = "hardened-host-kernel" ]; then
+     cat "${MYDIR}/debugging-config-host" >> "$extracted_linux_kernel_sources_folder/.config"
+   fi
    make oldconfig -C "$extracted_linux_kernel_sources_folder"
 fi
 
