@@ -1,3 +1,55 @@
+commit d9f9752e067a67c960de7dd7bb1fa5f28924fa09
+Merge: a732076 2d337b0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jan 20 07:26:02 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2d337b0f93f6c2dbdb94f57210f7b0106b5bbe52
+Merge: a732076 a985d1d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jan 20 12:23:56 2020 +0000
+
+    Merge pull request #34 from madaidan/disable_debugfs
+    
+    Disable debugfs
+
+commit a985d1d88e7386f53927a883cea0440709d402cf
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Jan 19 15:32:18 2020 +0000
+
+    Host debugging config
+
+commit 720ac8406190ae2e9abac6dffb1db2df271ec4b5
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Jan 19 15:30:45 2020 +0000
+
+    Host debugging config
+
+commit eb4773b1fa5f4ad62857b03feb27780ad6065c51
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Jan 19 15:30:13 2020 +0000
+
+    Enable debugfs in debug config
+
+commit feff80333011b9732225d9b2112283acd201b531
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Jan 19 15:23:16 2020 +0000
+
+    Disable debugfs
+
+commit b6c8e300e7ca0e21788a8ee4294b782cb60af1f7
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Jan 19 15:21:53 2020 +0000
+
+    Disable debugfs
+
+commit a7320767afb0efecb54116b739016a3a02b0fff2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 19 09:02:22 2020 -0500
+
+    bumped changelog version
+
 commit f87664993ed116dce842dee1a31979412a0524ab
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 19 08:41:17 2020 -0500
