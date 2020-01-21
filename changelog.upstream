@@ -1,3 +1,118 @@
+commit 3ec4ec4139316c97817ca35913349abc50e38fe1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 01:36:20 2020 -0500
+
+    fix
+
+commit 392c5ca2c1463eadbadcbb6bfd7724779f52cba2
+Merge: 9deca6e ed522ee
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 01:35:02 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ed522ee43b8234088e583a3f91b8f2056fb67df8
+Merge: 3acb0b2 7cec525
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 06:33:36 2020 +0000
+
+    Merge pull request #39 from madaidan/4.19.97
+    
+    Update to 4.19.97
+
+commit 3acb0b267757c2a7793bb967405e2ae80424de1d
+Merge: 7b831c7 dab9f76
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 06:32:18 2020 +0000
+
+    Merge pull request #38 from madaidan/coredump
+    
+    Disable coredumps
+
+commit 7b831c7a6da1d8ee71be25019d7738023c9ac81b
+Merge: fff630a e96c6bc
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 06:31:39 2020 +0000
+
+    Merge pull request #37 from madaidan/vsyscall_emulation
+    
+    Disable vsyscall emulation
+
+commit fff630aae4bfed6eeeabe3802ab0697a1ff5ab22
+Merge: 9deca6e 958149b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 06:27:44 2020 +0000
+
+    Merge pull request #36 from madaidan/module_sig
+    
+    Sign all kernel modules
+
+commit 7cec525d21817d81afc6b8d1791ffc1719924632
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:18:43 2020 +0000
+
+    Update to 4.19.97
+
+commit 0dd076d0407a2cadf2718bc0f844f8981c8895eb
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:18:33 2020 +0000
+
+    Update to 4.19.97
+
+commit 1569d871747d2436ce527e89739260d227c947de
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:16:14 2020 +0000
+
+    Update to 4.19.97
+
+commit dab9f76b9499d8438cfb6eca922e5a7749af704d
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:05:17 2020 +0000
+
+    Enable coredumps in debug config
+
+commit 5eb972f84b68b23ef292c35d4385eb1a9b1c3cf1
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:03:23 2020 +0000
+
+    Disable coredumps
+
+commit 8041ff0fd4cf12e7dfcea3f9ef334066539500ee
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 18:02:58 2020 +0000
+
+    Disable coredumps
+
+commit e96c6bca7332179c7a0089b9f69ed068d682c370
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 17:53:02 2020 +0000
+
+    Disable vsyscall emulation
+
+commit 199214c7f26a1a31a15c50e4f88bc87dcf72b8a0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 17:52:19 2020 +0000
+
+    Disable vsyscall emulation
+
+commit 958149bfa80420df69aaad2a7c0e845668c61939
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 17:26:20 2020 +0000
+
+    Sign all kernel modules
+
+commit 3677d648df763efdbf8201c154fa16dff731aa5c
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Jan 20 17:24:46 2020 +0000
+
+    Sign all kernel modules
+
+commit 9deca6e70ad93c72f2e13f3322860100fd7bff13
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jan 20 08:50:35 2020 -0500
+
+    bumped changelog version
+
 commit d9f9752e067a67c960de7dd7bb1fa5f28924fa09
 Merge: a732076 2d337b0
 Author: Patrick Schleizer <adrelanos@riseup.net>
