@@ -1,3 +1,43 @@
+commit 8f547f4169d8c3a9e8330843727581fb85266fbb
+Merge: 2673e70 5ccd54e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 22 03:51:09 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5ccd54eb3a8e1d2f79b4c72571f67b3397e23233
+Merge: 2673e70 d1b0bc2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 22 08:40:05 2020 +0000
+
+    Merge pull request #40 from madaidan/inet_diag
+    
+    Disable INET socket monitoring interface
+
+commit d1b0bc2f47687bb25f5359cd91df7b0e22d347e4
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 21 19:51:21 2020 +0000
+
+    Enable socket monitoring interface in debug config
+
+commit f7ea3bea65395f9a09493d5480faecda2d145834
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 21 19:50:27 2020 +0000
+
+    Disable INET socket monitoring interface
+
+commit b9dc7fa24e51b914c50ba273f289bd3cff1c785e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Jan 21 19:49:54 2020 +0000
+
+    Disable INET socket monitoring interface
+
+commit 2673e70b2b841783fab8cfbf28a941ef4027ebbd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jan 21 03:07:30 2020 -0500
+
+    bumped changelog version
+
 commit 3ec4ec4139316c97817ca35913349abc50e38fe1
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 21 01:36:20 2020 -0500
