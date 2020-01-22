@@ -12,6 +12,7 @@ true "$0: start"
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## travis.debian.net does not pass the CI environment variable to docker.
+## build script reads CI variable.
 CI=true
 export CI
 
