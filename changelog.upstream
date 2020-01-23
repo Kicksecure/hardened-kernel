@@ -1,3 +1,27 @@
+commit 330e67c43406b29d42eb39fec60b79a7ca4a0bff
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 22 09:47:57 2020 -0500
+
+    Sanity test. 'make oldconfig' should not modify '.config'."
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317
+
+commit 9871377b279de4932f8710b76a4388d22c2b784a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 22 09:39:45 2020 -0500
+
+    use standard kernel config file header comment
+    
+    to be able to use "make oldconfig" as sanity test
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317
+
+commit ff4bbf8c77fd10037080f4088165283906af234e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 22 06:39:41 2020 -0500
+
+    bumped changelog version
+
 commit 8f547f4169d8c3a9e8330843727581fb85266fbb
 Merge: 2673e70 5ccd54e
 Author: Patrick Schleizer <adrelanos@riseup.net>
