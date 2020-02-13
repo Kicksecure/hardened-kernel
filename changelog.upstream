@@ -1,3 +1,31 @@
+commit 3676b5563efa6d27628e537be21735749811d6aa
+Merge: e217517 0ed6ab0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 13 13:32:53 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0ed6ab08b721484569697ded1aab50cf4eb79f76
+Merge: e217517 825a407
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 13 18:31:42 2020 +0000
+
+    Merge pull request #41 from madaidan/rc
+    
+    Disable remote controllers in VM kernel
+
+commit 825a4076d4464937599d611f4b29d7cb3200c58a
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Feb 12 20:25:39 2020 +0000
+
+    Disable remote controllers
+
+commit e21751758d643dbdb2e0a3f7b0e2407f3172dc34
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jan 23 08:49:28 2020 -0500
+
+    bumped changelog version
+
 commit 330e67c43406b29d42eb39fec60b79a7ca4a0bff
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 22 09:47:57 2020 -0500
