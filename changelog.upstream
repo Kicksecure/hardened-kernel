@@ -1,3 +1,65 @@
+commit 1539c33fc4f10bae1af5f1e09acf42e63b1d5904
+Merge: c02954d 262fceb
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 15 14:43:28 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 262fceb8174545dd6b6a54b45b05ce40145880a2
+Merge: c02954d fa1de31
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 15 19:41:38 2020 +0000
+
+    Merge pull request #43 from madaidan/sysrq
+    
+    Restrict the SysRq key
+
+commit c02954d47d42c4c5bd850846fc3c7e30a5e1bed7
+Merge: 62630d0 d17f44c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 15 05:44:27 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d17f44cb83a1cb08efdd6db76983a7b5846ee7cb
+Merge: 62630d0 10c8a85
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 15 10:10:11 2020 +0000
+
+    Merge pull request #42 from madaidan/ldisc
+    
+    Restrict loading line disciplines to CAP_SYS_MODULE
+
+commit fa1de31935400d312fdaa9af2806705856448355
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 14 18:24:38 2020 +0000
+
+    Restrict the SysRq key
+
+commit 5ee12aa8b8305276eb93b09bf66c0703f9cbfe4d
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 14 18:24:25 2020 +0000
+
+    Restrict the SysRq key
+
+commit 10c8a8530d4bc132a8d42dc5415e7392877c8f60
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 14 17:56:08 2020 +0000
+
+    Restrict loading line disciplines to CAP_SYS_MODULE
+
+commit 9b187d632141f4b140da227c2cc8ecb813d5aa07
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 14 17:55:49 2020 +0000
+
+    Restrict loading line disciplines to CAP_SYS_MODULE
+
+commit 62630d0713a3a85acd99b712c615b788e0c8029f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 13 13:38:41 2020 -0500
+
+    bumped changelog version
+
 commit 3676b5563efa6d27628e537be21735749811d6aa
 Merge: e217517 0ed6ab0
 Author: Patrick Schleizer <adrelanos@riseup.net>
