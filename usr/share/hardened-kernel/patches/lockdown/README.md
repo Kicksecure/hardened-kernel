@@ -4,12 +4,12 @@ lockdown is not available in LTS kernels.
 Features that are already mitigated by our kernel configuration are not
 implemented.
 
-# 0001-lockdown-kconfig.patch:
+# lockdown-kconfig.patch:
 
 Creates the CONFIG_SECURITY_LOCKDOWN kconfig setting to enable/disable
 kernel lockdown.
 
-# 0002-lockdown-efivar_ssdt_load.patch:
+# lockdown-efivar_ssdt_load.patch:
 
 Disables efivar_ssdt_load.
 
@@ -19,7 +19,7 @@ Only useful for the host kernel.
 EFI variable, which gives arbitrary code execution in ring 0. Prevent
 that when the kernel is locked down.
 
-# 0003-lockdown-pci-bar-access.patch:
+# lockdown-pci-bar-access.patch:
 
 Locks down PCI BAR access.
 
@@ -29,7 +29,7 @@ allowing them to circumvent disabled module loading or module signing.
 Default to paranoid - in future we can potentially relax this for
 sufficiently IOMMU-isolated devices.
 
-# 0004-lockdown-perf.patch:
+# lockdown-perf.patch:
 
 Locks down perf.
 
@@ -42,7 +42,7 @@ linux-hardened.
 > Disallow the use of certain perf facilities that might allow userspace to
 access kernel data.
 
-# 0005-lockdown-tiocsserial.patch
+# lockdown-tiocsserial.patch
 
 Locks down TIOCSSERIAL.
 
@@ -51,7 +51,7 @@ settings on a serial port.  This only appears to be an issue for the serial
 drivers that use the core serial code.  All other drivers seem to either
 ignore attempts to change port/irq or give an error.
 
-# 0006-lockdown-ioport.patch:
+# lockdown-ioport.patch:
 
 Locks down IO port access (specifically, the ioperm() and iopl() syscalls).
 
@@ -63,7 +63,7 @@ DMA, so lock it down by default.
 > This also implicitly locks down the KDADDIO, KDDELIO, KDENABIO and
 KDDISABIO console ioctls.
 
-# 0007-lockdown-pcmcia.patch:
+# lockdown-pcmcia.patch:
 
 Locks down PCMCIA.
 
@@ -72,7 +72,7 @@ Only useful for the host kernel.
 > Prohibit replacement of the PCMCIA Card Information Structure when the
 kernel is locked down.
 
-# 0008-lockdown-module-params.patch:
+# lockdown-module-params.patch:
 
 Locks down module parameters.
 
