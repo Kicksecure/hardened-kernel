@@ -6,8 +6,8 @@ implemented.
 
 # lockdown-kconfig.patch:
 
-Creates the CONFIG_SECURITY_LOCKDOWN kconfig setting to enable/disable
-kernel lockdown.
+Creates the CONFIG_SECURITY_LOCKDOWN kconfig setting and boot parameter
+to enable/disable kernel lockdown.
 
 # lockdown-efivar_ssdt_load.patch:
 
