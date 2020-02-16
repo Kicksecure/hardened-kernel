@@ -56,13 +56,14 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ## Debugging.
 whoami
 env
+true "CI: $CI"
 
 ## TODO: do not use networking as per https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/214
 ## https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/267
 "$MYDIR/download"
 
 ## TODO: auto detect from files in folder /usr/src/hardened-kernel/files
-version="4.19.93"
+version="4.19.97"
 
 ## Location similar to DKMS.
 ## DKMS uses /var/lib/dkms/pkg-name/build/.
@@ -111,7 +112,17 @@ if [ "$debug" = "true" ]; then
       fi
    fi
 
+   if [ "$CI" = "true" ]; then
+      true "Sanity test. 'make oldconfig' should not modify '.config'."
+      true "https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317"
+      make oldconfig -C "$extracted_linux_kernel_sources_folder"
+      diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
+   fi
+
    cat "${MYDIR}/debugging-config" >> "$extracted_linux_kernel_sources_folder/.config"
+   if [ "${kernel_config}" = "hardened-host-kernel" ]; then
+     cat "${MYDIR}/debugging-config-host" >> "$extracted_linux_kernel_sources_folder/.config"
+   fi
    make oldconfig -C "$extracted_linux_kernel_sources_folder"
 fi
 

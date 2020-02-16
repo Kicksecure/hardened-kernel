@@ -12,6 +12,7 @@ true "$0: start"
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ## travis.debian.net does not pass the CI environment variable to docker.
+## build script reads CI variable.
 CI=true
 export CI
 
@@ -55,9 +56,40 @@ done
 ## Debugging.
 ls "/home/travis/build/" || true
 
+lintian_suppress_tags=""
+lintian_suppress_tags+="testsuite-autopkgtest-missing,"
+lintian_suppress_tags+="changed-by-address-is-root-user,"
+lintian_suppress_tags+="changed-by-address-malformed,"
+lintian_suppress_tags+="debian-control-has-obsolete-dbg-package,"
+lintian_suppress_tags+="license-problem-gfdl-invariants-empty,"
+lintian_suppress_tags+="source-contains-prebuilt-binary,"
+lintian_suppress_tags+="package-does-not-install-examples,"
+lintian_suppress_tags+="license-problem-gfdl-invariants,"
+lintian_suppress_tags+="package-does-not-use-debhelper-or-cdbs,"
+lintian_suppress_tags+="missing-debian-source-format,"
+lintian_suppress_tags+="dbg-package-missing-depends,"
+lintian_suppress_tags+="direct-changes-in-diff-but-no-patch-system,"
+lintian_suppress_tags+="debian-rules-missing-required-target,"
+lintian_suppress_tags+="debian-rules-missing-recommended-target,"
+lintian_suppress_tags+="debian-rules-missing-recommended-target,"
+lintian_suppress_tags+="no-dep5-copyright,"
+lintian_suppress_tags+="no-standards-version-field,"
+lintian_suppress_tags+="debian-watch-file-is-missing,"
+lintian_suppress_tags+="spelling-error-in-binary,"
+lintian_suppress_tags+="new-package-should-close-itp-bug,"
+lintian_suppress_tags+="extended-description-is-probably-too-short,"
+lintian_suppress_tags+="maintainer-address-is-root-user,"
+lintian_suppress_tags+="maintainer-address-malformed,"
+lintian_suppress_tags+="hardening-no-fortify-functions,"
+lintian_suppress_tags+="hardening-no-bindnow,"
+lintian_suppress_tags+="unstripped-binary-or-object,"
+lintian_suppress_tags+="debian-changelog-file-contains-invalid-email-address,"
+lintian_suppress_tags+="package-contains-vcs-control-file,"
+lintian_suppress_tags+="package-contains-documentation-outside-usr-share-doc,"
+
 ## Try lintian newly built kernel.
 lintian \
-   --suppress-tags testsuite-autopkgtest-missing \
+   --suppress-tags "$lintian_suppress_tags" \
    --quiet \
    --pedantic \
    --info \
