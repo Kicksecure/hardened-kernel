@@ -1,6 +1,6 @@
-diff --git a/linux-4.19.97/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
+diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
 index 9ae9f28..6f31664 100644
---- a/linux-4.19.97/Documentation/admin-guide/kernel-parameters.txt
+--- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -2186,6 +2186,12 @@
  	lockd.nlm_udpport=M	[NFS] Assign UDP port.
@@ -15,9 +15,9 @@ index 9ae9f28..6f31664 100644
  	locktorture.nreaders_stress= [KNL]
  			Set the number of locking read-acquisition kthreads.
  			Defaults to being automatically set based on the
-diff --git a/linux-4.19.97/include/linux/security.h b/include/linux/security.h
+diff --git a/include/linux/security.h b/include/linux/security.h
 index 75f4156..1a69db0 100644
---- a/linux-4.19.97/include/linux/security.h
+--- a/include/linux/security.h
 +++ b/include/linux/security.h
 @@ -66,6 +66,9 @@ struct audit_krule;
  struct user_namespace;
@@ -29,9 +29,9 @@ index 75f4156..1a69db0 100644
  enum lsm_event {
  	LSM_POLICY_CHANGE,
  };
-diff --git a/linux-4.19.97/security/Kconfig b/security/Kconfig
+diff --git a/security/Kconfig b/security/Kconfig
 index a921713..92b4f43 100644
---- a/linux-4.19.97/security/Kconfig
+--- a/security/Kconfig
 +++ b/security/Kconfig
 @@ -281,6 +281,13 @@ config STATIC_USERMODEHELPER_PATH
  	  If you wish for all usermode helper programs to be disabled,
@@ -47,9 +47,9 @@ index a921713..92b4f43 100644
  source security/selinux/Kconfig
  source security/smack/Kconfig
  source security/tomoyo/Kconfig
-diff --git a/linux-4.19.97/security/Makefile b/security/Makefile
+diff --git a/security/Makefile b/security/Makefile
 index 4d2d378..ccf18e1 100644
---- a/linux-4.19.97/security/Makefile
+--- a/security/Makefile
 +++ b/security/Makefile
 @@ -30,3 +30,6 @@ obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
  # Object integrity file lists
