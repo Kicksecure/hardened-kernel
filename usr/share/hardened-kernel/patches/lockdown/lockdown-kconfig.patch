@@ -48,7 +48,7 @@ index a921713..92b4f43 100644
  source security/smack/Kconfig
  source security/tomoyo/Kconfig
 diff --git a/security/Makefile b/security/Makefile
-index 4d2d378..ccf18e1 100644
+index 4d2d378..4b183ad 100644
 --- a/security/Makefile
 +++ b/security/Makefile
 @@ -30,3 +30,6 @@ obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
@@ -57,10 +57,10 @@ index 4d2d378..ccf18e1 100644
  obj-$(CONFIG_INTEGRITY)			+= integrity/
 +
 +# Kernel lockdown
-+obj-$(CONFIG_SECURITY_LOCKDOWN)		+= lockdown.o
++obj-y					+= lockdown.o
 diff --git a/security/lockdown.c b/security/lockdown.c
 new file mode 100644
-index 0000000..09b9cc6
+index 0000000..f9291b3
 --- /dev/null
 +++ b/security/lockdown.c
 @@ -0,0 +1,20 @@
@@ -75,9 +75,9 @@ index 0000000..09b9cc6
 +		return -EINVAL;
 +
 +	if (strcmp(level, "on") == 0)
-+		int kernel_lockdown = 1;
++		kernel_lockdown = 1;
 +	else if (strcmp(level, "off") == 0)
-+		int kernel_lockdown = 0;
++		kernel_lockdown = 0;
 +	else
 +		return -EINVAL;
 +
