@@ -1,3 +1,126 @@
+commit caf2fe40ee17a2e9482a3e2f96178e2f837c8188
+Merge: 1ee0cb4 358ea29
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 29 07:39:55 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 358ea297832672408b7897d9783a5b181649319c
+Merge: c14e42b a277f7b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 29 08:43:02 2020 +0000
+
+    Merge pull request #48 from madaidan/mce
+    
+    Re-enable MCE in VM kernel
+
+commit c14e42b6a040ac044b5b6f890585d402745be49f
+Merge: 1ee0cb4 6487bcf
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 29 08:30:58 2020 +0000
+
+    Merge pull request #49 from madaidan/dev_coredump
+    
+    Disable device coredump
+
+commit 6487bcfe231bb3970351b24111959a3e8e14b3d0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 28 18:56:46 2020 +0000
+
+    Enable device coredump in debug config
+
+commit ebaaf344848c9ddd0056c6cfe4ea59ad14a86c6b
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 28 18:56:07 2020 +0000
+
+    Enable device coredump in debug config
+
+commit 746bb12b6c3b65ad9c7ea501242caa879a84cf94
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 28 18:54:02 2020 +0000
+
+    Disable device coredump
+
+commit e37db95999433e82d4eb7d410ccd5494d4cb256a
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 28 18:53:18 2020 +0000
+
+    Disable device coredump
+
+commit a277f7b27b7b19f79a5b66dac0a62917b7474d41
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Thu Feb 27 17:57:42 2020 +0000
+
+    Re-enable MCE in VM kernel
+
+commit 1ee0cb4642ab42fce55046426273f081095ece0b
+Merge: 3cdb41c ffeafb8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 26 06:01:07 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ffeafb8b343b8b378741059fde26f27fa9b82a22
+Merge: 3cdb41c f2f88e9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 26 10:58:45 2020 +0000
+
+    Merge pull request #46 from madaidan/virtio-rng
+    
+    Compile only virtio-rng as built-in
+
+commit 3cdb41c5e5b22b03ab86dd638347115320de38ed
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 26 05:54:57 2020 -0500
+
+    Revert "Revert "Compile HWRNGs as built-in""
+    
+    This reverts commit 6913763980bcfff164d59f0277238befb35d55c2.
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/397
+
+commit f2f88e95d9bca28f7f60eabe5c01e05e3975a630
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Tue Feb 25 17:08:09 2020 +0000
+
+    Compile virtio-rng as built-in
+
+commit 6913763980bcfff164d59f0277238befb35d55c2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Feb 23 10:48:54 2020 -0500
+
+    Revert "Compile HWRNGs as built-in"
+    
+    This reverts commit 136347b4b18bfa533cf2f59fe4ffec23d8c403b6.
+
+commit cb5abcb5db9a8daa033a265be1f88f7e39d4cf9c
+Merge: f48c33b c686908
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 22 02:02:48 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c6869086b18222efaaf81c08bb74208ae1eab250
+Merge: f48c33b 136347b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 22 06:27:03 2020 +0000
+
+    Merge pull request #44 from madaidan/rng
+    
+    Compile HWRNGs as built-in
+
+commit 136347b4b18bfa533cf2f59fe4ffec23d8c403b6
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 21 18:19:13 2020 +0000
+
+    Compile HWRNGs as built-in
+
+commit f48c33b74fcb7b885d2db89a59ee6c1677589791
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Feb 15 15:28:48 2020 -0500
+
+    bumped changelog version
+
 commit 1539c33fc4f10bae1af5f1e09acf42e63b1d5904
 Merge: c02954d 262fceb
 Author: Patrick Schleizer <adrelanos@riseup.net>
