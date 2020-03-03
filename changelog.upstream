@@ -1,3 +1,25 @@
+commit 1ca7476322f3c658c96310eff4cba08798d9c25d
+Merge: ea38c44 4176d1e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 3 09:11:45 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ea38c44cbf011096c504b4cf25a1b2a068d624c3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 3 09:09:56 2020 -0500
+
+    bumped changelog version
+
+commit 4176d1e4fe6d0ba9db66886f31dc32bc5ef340b4
+Merge: caf2fe4 4420dac
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Mar 2 11:36:34 2020 +0000
+
+    Merge pull request #50 from madaidan/hdlc
+    
+    Disable HDLC in host kernel
+
 commit caf2fe40ee17a2e9482a3e2f96178e2f837c8188
 Merge: 1ee0cb4 358ea29
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -22,6 +44,12 @@ Date:   Sat Feb 29 08:30:58 2020 +0000
     Merge pull request #49 from madaidan/dev_coredump
     
     Disable device coredump
+
+commit 4420dac87041169e0c8effd9011591a4edb7bc22
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 28 19:08:23 2020 +0000
+
+    Disable HDLC
 
 commit 6487bcfe231bb3970351b24111959a3e8e14b3d0
 Author: madaidan <50278627+madaidan@users.noreply.github.com>
