@@ -1,3 +1,74 @@
+commit 107e32667ff5db4a0b3c0d733a9b3338b93d6f87
+Merge: fa17620 aeaaef4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Mar 4 08:46:51 2020 -0500
+
+    Merge remote-tracking branch 'origin/master'
+    
+    breaks:
+    
+    CONFIG_RTL8192U
+    RealTek RTL8192U Wireless LAN NIC driver
+    
+    CONFIG_RTL8192E
+    RealTek RTL8192E Wireless LAN NIC driver
+    
+    CONFIG_RTL8723BS
+    RTL8723BS SDIO
+    Intel Compute Stick, the CHIP and many other Intel Atom and ARM based devices
+    
+    R8712U
+    D-Link DWA-130
+    
+    CONFIG_R8188EU
+    TP-Link TL-WN725N
+    
+    CONFIG_R8822BE
+    Realtek RTL8822BE 802.11ac
+    
+    CONFIG_RTS5208
+    Realtek PCI-E Card Reader RTS5208/5288 support
+    
+    data acquisition device
+    CONFIG_COMEDI
+    
+    IIO staging drivers
+    Accelerometers
+    Analog to digital converters
+    Capacitance to digital converters
+    Direct Digital Synthesis
+    Network Analyzer, Impedance Converters
+    Resolver to digital converters
+    Speakup console speech
+    Gasket devices
+    
+    * Android
+    
+    * Android related
+    
+    CONFIG_ANDROID_VSOC
+    Android Virtual SoC support
+    Virtual SoC driver needed to boot a 'cuttlefish' Android image inside QEmu. The driver interacts with a QEmu ivshmem device. If built as a module, it will be called vsoc.
+    Raspberry Pi related:
+    
+    * Pi433 - a 433MHz radio module for Raspberry Pi
+    * CONFIG_PI433
+
+commit aeaaef4c104a029ec786b348952a4fd35743f2a7
+Merge: fa17620 c41c461
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Mar 4 13:24:36 2020 +0000
+
+    Merge pull request #45 from madaidan/staging
+    
+    Disable staging drivers
+
+commit fa176201be3fccb0b6b747c62d55d091d0e44051
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Mar 3 09:18:57 2020 -0500
+
+    bumped changelog version
+
 commit 1ca7476322f3c658c96310eff4cba08798d9c25d
 Merge: ea38c44 4176d1e
 Author: Patrick Schleizer <adrelanos@riseup.net>
@@ -136,6 +207,12 @@ Date:   Sat Feb 22 06:27:03 2020 +0000
     Merge pull request #44 from madaidan/rng
     
     Compile HWRNGs as built-in
+
+commit c41c461b9ea75e4074cc008942161dd534346b29
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Feb 21 18:40:26 2020 +0000
+
+    Disable staging drivers
 
 commit 136347b4b18bfa533cf2f59fe4ffec23d8c403b6
 Author: madaidan <50278627+madaidan@users.noreply.github.com>
