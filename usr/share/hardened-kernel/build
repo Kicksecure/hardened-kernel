@@ -63,7 +63,7 @@ true "CI: $CI"
 "$MYDIR/download"
 
 ## TODO: auto detect from files in folder /usr/src/hardened-kernel/files
-version="4.19.97"
+version="4.19.108"
 
 ## Location similar to DKMS.
 ## DKMS uses /var/lib/dkms/pkg-name/build/.
