@@ -1,3 +1,21 @@
+commit ab2df71eae766485dee2c396d15ba1a3ddcf8a97
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:22:32 2020 -0400
+
+    readme
+
+commit 70b99dc5700b3de415907e65e1a9da651e2f87fa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 16:57:30 2020 -0400
+
+    remove genmkfile
+
+commit cc863dd0fd9c52ccc1fcda8a3600708731b19a7d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Apr 1 10:39:58 2020 -0400
+
+    bumped changelog version
+
 commit 83fc8dcc4a2a7c5866e9457aecac7795754917fc
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 1 08:49:55 2020 -0400
