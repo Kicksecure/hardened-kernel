@@ -1,3 +1,25 @@
+commit fdcf91eebecd0b63a130acb858adcd0e1969f99d
+Merge: 3f1b898 dd16993
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 06:30:52 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit dd169933190f0c5de935915009f923bd80c3f5d1
+Merge: 3f1b898 00e3600
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 10:19:54 2020 +0000
+
+    Merge pull request #51 from madaidan/unneeded
+    
+    Disable unneeded drivers - actually not reviewed but tracking that here: https://phabricator.whonix.org/T955
+
+commit 3f1b8981508b8b1f344328d031e8db2134907249
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Apr 2 07:46:24 2020 -0400
+
+    bumped changelog version
+
 commit ab2df71eae766485dee2c396d15ba1a3ddcf8a97
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 07:22:32 2020 -0400
@@ -61,6 +83,18 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 5 08:35:38 2020 -0500
 
     bumped changelog version
+
+commit 00e3600c9338d1951b5d6d7e52bcd3a879985eca
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Mar 4 18:41:56 2020 +0000
+
+    Disable unneeded drivers
+
+commit f7907ad9a471d1448eb2c74de2446b49ed1ddb17
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Wed Mar 4 18:38:50 2020 +0000
+
+    Disable unneeded drivers
 
 commit 107e32667ff5db4a0b3c0d733a9b3338b93d6f87
 Merge: fa17620 aeaaef4
