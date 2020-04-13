@@ -1,3 +1,37 @@
+commit ddc104da25b73f24059993e924adeb8df9f81b54
+Merge: 0ea37fe 2ee22d4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 15:39:48 2020 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2ee22d49ffba4b7eb51340bd98b4aa212bc7a884
+Merge: 0ea37fe 641af41
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 17:52:34 2020 +0000
+
+    Merge pull request #53 from madaidan/legacy
+    
+    Disable legacy drivers
+
+commit 641af41f936cef17a4870d4904a61166d6826859
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Apr 13 16:08:01 2020 +0000
+
+    Disable legacy drivers
+
+commit f2dafb06e5df50a75a69b530f084642169bc436e
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Mon Apr 13 16:06:42 2020 +0000
+
+    Disable legacy drivers
+
+commit 0ea37fe97bf0ce7ee968cd9f285fe2ef3d6dc59c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Apr 13 06:55:43 2020 -0400
+
+    bumped changelog version
+
 commit fdcf91eebecd0b63a130acb858adcd0e1969f99d
 Merge: 3f1b898 dd16993
 Author: Patrick Schleizer <adrelanos@riseup.net>
