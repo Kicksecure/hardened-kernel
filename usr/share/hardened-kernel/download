@@ -27,7 +27,7 @@ cd /usr/src/hardened-kernel/files
 # the XZ binary to alter the verification process or compromise the
 # system performing the verification.
 
-version="4.19.108"
+version="4.19.122"
 
 kernel_sha256sums_file="https://kernel.org/pub/linux/kernel/v4.x/sha256sums.asc"
 kernel_source_signature="https://kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.sign"
