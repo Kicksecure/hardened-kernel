@@ -43,7 +43,7 @@ See also development discussion:
 http://forums.whonix.org/t/kernel-recompilation-for-better-hardening
 ## How to install `hardened-kernel` using apt-get ##
 
-1\. Download [Whonix's Signing Key]().
+1\. Download Whonix's Signing Key.
 
 ```
 wget https://www.whonix.org/patrick.asc
