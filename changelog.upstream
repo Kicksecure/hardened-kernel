@@ -1,3 +1,17 @@
+commit 55f1347cdebf0f04de393ea61b51e340cf788770
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 29 16:54:23 2020 -0400
+
+    downgrade to --tlsv1.2 since --tlsv1.3 is unsupported by kernel.org
+    
+    https://www.hardenize.com/report/kernel.org/1603725038#www_tls
+
+commit 0609d89e7b7d760a7cd6c52d50a0149f9f475bbd
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 29 16:18:10 2020 -0400
+
+    bumped changelog version
+
 commit 99babc39df21ac9073583515f4ee8341a34e4669
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 29 16:18:09 2020 -0400
