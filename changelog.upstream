@@ -1,3 +1,31 @@
+commit 8c451962d1703de0a985ba8f67cdc549e3fe32c9
+Merge: bc2102f 15d4397
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 14 01:31:02 2020 -0500
+
+    Merge remote-tracking branch 'github/master'
+
+commit 15d439730aa897fb6dc4ba01076c24ca06f4182f
+Merge: bc2102f 1069084
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 14 06:30:32 2020 +0000
+
+    Merge pull request #55 from madaidan/system_trusted_keys
+    
+    Fix issue with compiling host kernel
+
+commit 10690848e25685282c340d4551347734a0ddfe05
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sun Dec 13 17:32:53 2020 +0000
+
+    Fix issue with compiling host kernel
+
+commit bc2102fccada1df0b4c913dfa8d740166278e3c6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Oct 30 09:55:57 2020 -0400
+
+    bumped changelog version
+
 commit 55f1347cdebf0f04de393ea61b51e340cf788770
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 29 16:54:23 2020 -0400
