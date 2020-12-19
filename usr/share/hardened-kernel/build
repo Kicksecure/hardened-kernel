@@ -12,6 +12,8 @@ do
    case $1 in
    --debug)
       debug="true"
+      ## Implies --lkrg
+      kprobes="true"
       shift
       ;;
    --non-interactive)
@@ -24,6 +26,10 @@ do
       ;;
    --host)
       kernel_config="hardened-host-kernel"
+      shift
+      ;;
+   --lkrg)
+      kprobes="true"
       shift
       ;;
    --)
@@ -98,6 +104,10 @@ cp "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 
 ## Sanity test.
 diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
+
+if [ "${kprobes}" = "true" ]; then
+  cat "${MYDIR}/kprobes-ftrace" >> "$extracted_linux_kernel_sources_folder/.config"
+fi
 
 if [ "$debug" = "true" ]; then
    if [ "${continue_debug,,}" = "y" ]; then
