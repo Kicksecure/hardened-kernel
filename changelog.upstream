@@ -1,3 +1,31 @@
+commit de4bb129a6ef2047c3c8f0a58c96995db5937db2
+Merge: a325d03 744945a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 20 01:40:17 2020 -0500
+
+    Merge remote-tracking branch 'github/master'
+
+commit 744945a031ba019ea716199e4fa1a82fa61bfb6e
+Merge: a325d03 629b624
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 20 06:39:24 2020 +0000
+
+    Merge pull request #56 from madaidan/lkrg
+    
+    Optionally enable kprobes/ftrace for LKRG support
+
+commit 629b62475455ce5ef073e6ba8b970ea76ade88a0
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Sat Dec 19 18:32:02 2020 +0000
+
+    Optionally enable kprobes/ftrace for LKRG support
+
+commit a325d03ee1a3f2dc913da5ac118f6c2ca77b5670
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Dec 14 01:53:59 2020 -0500
+
+    bumped changelog version
+
 commit 8c451962d1703de0a985ba8f67cdc549e3fe32c9
 Merge: bc2102f 15d4397
 Author: Patrick Schleizer <adrelanos@riseup.net>
