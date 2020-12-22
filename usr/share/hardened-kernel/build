@@ -105,6 +105,13 @@ cp "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 ## Sanity test.
 diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 
+if [ "$CI" = "true" ]; then
+   true "Sanity test. 'make oldconfig' should not modify '.config'."
+   true "https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317"
+   make oldconfig -C "$extracted_linux_kernel_sources_folder"
+   diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
+fi
+
 if [ "${kprobes}" = "true" ]; then
   cat "${MYDIR}/kprobes-ftrace" >> "$extracted_linux_kernel_sources_folder/.config"
 fi
@@ -119,13 +126,6 @@ if [ "$debug" = "true" ]; then
          echo "You have selected to not continue. Exiting."
          exit
       fi
-   fi
-
-   if [ "$CI" = "true" ]; then
-      true "Sanity test. 'make oldconfig' should not modify '.config'."
-      true "https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317"
-      make oldconfig -C "$extracted_linux_kernel_sources_folder"
-      diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
    fi
 
    cat "${MYDIR}/debugging-config" >> "$extracted_linux_kernel_sources_folder/.config"
