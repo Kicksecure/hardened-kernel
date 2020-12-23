@@ -1,3 +1,17 @@
+commit d941ad1bc6c842e932922d792818ac716ccd437c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Dec 22 08:12:17 2020 -0500
+
+    CI fix
+    
+    https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/504
+
+commit 1e58d940b7973d7f7f91ccd49935f93ef04c6b7b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Dec 20 07:55:06 2020 -0500
+
+    bumped changelog version
+
 commit de4bb129a6ef2047c3c8f0a58c96995db5937db2
 Merge: a325d03 744945a
 Author: Patrick Schleizer <adrelanos@riseup.net>
