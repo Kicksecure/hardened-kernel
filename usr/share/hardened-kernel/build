@@ -12,8 +12,6 @@ do
    case $1 in
    --debug)
       debug="true"
-      ## Implies --lkrg
-      kprobes="true"
       shift
       ;;
    --non-interactive)
@@ -26,10 +24,6 @@ do
       ;;
    --host)
       kernel_config="hardened-host-kernel"
-      shift
-      ;;
-   --lkrg)
-      kprobes="true"
       shift
       ;;
    --)
@@ -110,10 +104,6 @@ if [ "$CI" = "true" ]; then
    true "https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317"
    make oldconfig -C "$extracted_linux_kernel_sources_folder"
    diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
-fi
-
-if [ "${kprobes}" = "true" ]; then
-  cat "${MYDIR}/kprobes-ftrace" >> "$extracted_linux_kernel_sources_folder/.config"
 fi
 
 if [ "$debug" = "true" ]; then
