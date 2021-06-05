@@ -1,3 +1,39 @@
+commit 196ed3e08d8b6e4b2823ecb2bda8f6933d8bf0ec
+Merge: aa28d16 e4d2e16
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 5 15:21:03 2021 -0400
+
+    Merge remote-tracking branch 'github-whonix/master'
+
+commit e4d2e16df6145c06caed99cde8fc9bc3e407bd47
+Merge: aa28d16 1fdfc87
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 5 15:19:59 2021 -0400
+
+    Merge pull request #57 from madaidan/kprobes
+    
+    Enable kprobes
+
+commit 1fdfc87335534e627a29b6cc8d140c5634ce9dd5
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jun 4 21:00:33 2021 +0000
+
+    Enable CONFIG_KPROBES
+
+commit 4d4993602e9222141f5dfda1373d44c647ff9920
+Author: madaidan <50278627+madaidan@users.noreply.github.com>
+Date:   Fri Jun 4 20:33:39 2021 +0000
+
+    Revert "Optionally enable kprobes/ftrace for LKRG support"
+    
+    This reverts commit 629b62475455ce5ef073e6ba8b970ea76ade88a0.
+
+commit aa28d16ff6de836058152c1e6e1edd24f1a0fd01
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 17 11:30:36 2021 -0400
+
+    bumped changelog version
+
 commit 4b64abda41fcfe2dba060bb9f15750c8ef9f02e3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 11:30:34 2021 -0400
