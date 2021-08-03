@@ -57,7 +57,7 @@ done
 ls "/home/travis/build/" || true
 
 lintian_suppress_tags=""
-lintian_suppress_tags+="testsuite-autopkgtest-missing,"
+lintian_suppress_tags+="missing-tests-control,"
 lintian_suppress_tags+="changed-by-address-is-root-user,"
 lintian_suppress_tags+="changed-by-address-malformed,"
 lintian_suppress_tags+="debian-control-has-obsolete-dbg-package,"
