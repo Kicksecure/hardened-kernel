@@ -1,3 +1,39 @@
+commit 1673691276dac91b6b2e5aa6d2a319d1e4cc671d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 4 15:52:13 2021 -0400
+
+    bullseye
+
+commit 006e184a1a1424db24b4a94afd7dd5f7e0e4f290
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 06:08:19 2021 -0400
+
+    update lintian tag name
+
+commit 0752afe52d52d2355f7cf31722e02457cfd30963
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 3 05:48:21 2021 -0400
+
+    bullseye
+
+commit 426275df891aa38331a764a421805809009557ed
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:31:49 2021 -0400
+
+    bullseye
+
+commit 9dc4c14c6a708a2925b05330c48c2199cf20e5ad
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 1 16:24:30 2021 -0400
+
+    readme
+
+commit 2f5226ff99d06fee5907ec7b95b4142447d7fe03
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Jun 5 16:47:47 2021 -0400
+
+    bumped changelog version
+
 commit 196ed3e08d8b6e4b2823ecb2bda8f6933d8bf0ec
 Merge: aa28d16 e4d2e16
 Author: Patrick Schleizer <adrelanos@whonix.org>
