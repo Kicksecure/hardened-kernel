@@ -36,7 +36,7 @@ linux_hardened_patch_signature="https://github.com/anthraxx/linux-hardened/relea
 linux_hardened_patch_archive="https://github.com/anthraxx/linux-hardened/releases/download/${version}.a/linux-hardened-${version}.a.patch"
 
 ## https://www.hardenize.com/report/kernel.org/1603725038#www_tls
-curl_opts="--tlsv1.2 --proto =https --location --remote-name-all --remote-header-name"
+curl_opts="--tlsv1.2 --proto =https --location --remote-name"
 
 curl $curl_opts "${kernel_sha256sums_file}" -o "./sha256sums.asc"
 curl $curl_opts "${kernel_source_signature}" -o "./linux-${version}.tar.sign"
