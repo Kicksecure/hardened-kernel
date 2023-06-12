@@ -13,7 +13,7 @@ if:
 
 env:
   global:
-  - TRAVIS_DEBIAN_DISTRIBUTION=bullseye
+  - TRAVIS_DEBIAN_DISTRIBUTION=bookworm
   - TRAVIS_DEBIAN_SECURITY_UPDATES=true
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE=./usr/share/hardened-kernel/ci_test
   - TRAVIS_DEBIAN_GIT_BUILDPACKAGE_OPTIONS=" "
