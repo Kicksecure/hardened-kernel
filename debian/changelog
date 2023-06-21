@@ -1,3 +1,9 @@
+hardened-kernel (3:4.5-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 21 Jun 2023 09:17:43 +0000
+
 hardened-kernel (3:4.4-1) unstable; urgency=medium
 
   * New upstream version (local package).
