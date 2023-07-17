@@ -1,15 +1,15 @@
-## Copyright (C) 2012 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## Copyright (C) 2012 - 2023 ENCRYPTED SUPPORT LP <adrelanos@kicksecure.com>
 ## See the file COPYING for copying conditions.
 
 Source: hardened-kernel
 Section: misc
 Priority: optional
-Maintainer: Patrick Schleizer <adrelanos@whonix.org>
+Maintainer: Patrick Schleizer <adrelanos@kicksecure.com>
 ## From perspective of CI these are build dependencies.
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13),
  libssl-dev, libncurses-dev, fakeroot,
  libelf-dev, bison, flex, gcc-12-plugin-dev, curl, bc, kmod, cpio
-Homepage: https://github.com/Kicksecure/hardened-kernel
+Homepage: https://www.kicksecure.com/wiki/Hardened-kernel
 Vcs-Browser: https://github.com/Kicksecure/hardened-kernel
 Vcs-Git: https://github.com/Kicksecure/hardened-kernel.git
 Standards-Version: 4.6.2
