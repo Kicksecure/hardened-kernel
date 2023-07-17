@@ -9,9 +9,9 @@ Maintainer: Patrick Schleizer <adrelanos@whonix.org>
 Build-Depends: debhelper (>= 13), debhelper-compat (= 13),
  libssl-dev, libncurses-dev, fakeroot,
  libelf-dev, bison, flex, gcc-12-plugin-dev, curl, bc, kmod, cpio
-Homepage: https://github.com/Whonix/hardened-kernel
-Vcs-Browser: https://github.com/Whonix/hardened-kernel
-Vcs-Git: https://github.com/Whonix/hardened-kernel.git
+Homepage: https://github.com/Kicksecure/hardened-kernel
+Vcs-Browser: https://github.com/Kicksecure/hardened-kernel
+Vcs-Git: https://github.com/Kicksecure/hardened-kernel.git
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
