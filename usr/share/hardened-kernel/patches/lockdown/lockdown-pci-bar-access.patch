@@ -1,0 +1,98 @@
+diff --git a/drivers/pci/pci-sysfs.c b/drivers/pci/pci-sysfs.c
+index 1edf5a1..a529f6b 100644
+--- a/drivers/pci/pci-sysfs.c
++++ b/drivers/pci/pci-sysfs.c
+@@ -905,6 +905,9 @@ static ssize_t pci_write_config(struct file *filp, struct kobject *kobj,
+ 	loff_t init_off = off;
+ 	u8 *data = (u8 *) buf;
+ 
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	if (off > dev->cfg_size)
+ 		return 0;
+ 	if (off + count > dev->cfg_size) {
+@@ -1167,6 +1170,9 @@ static int pci_mmap_resource(struct kobject *kobj, struct bin_attribute *attr,
+ 	enum pci_mmap_state mmap_type;
+ 	struct resource *res = &pdev->resource[bar];
+ 
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	if (res->flags & IORESOURCE_MEM && iomem_is_exclusive(res->start))
+ 		return -EINVAL;
+ 
+@@ -1242,6 +1248,9 @@ static ssize_t pci_write_resource_io(struct file *filp, struct kobject *kobj,
+ 				     struct bin_attribute *attr, char *buf,
+ 				     loff_t off, size_t count)
+ {
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	return pci_resource_io(filp, kobj, attr, buf, off, count, true);
+ }
+ 
+diff --git a/drivers/pci/proc.c b/drivers/pci/proc.c
+index 7ac035a..972702c 100644
+--- a/drivers/pci/proc.c
++++ b/drivers/pci/proc.c
+@@ -13,6 +13,7 @@
+ #include <linux/seq_file.h>
+ #include <linux/capability.h>
+ #include <linux/uaccess.h>
++#include <linux/security.h>
+ #include <asm/byteorder.h>
+ #include "pci.h"
+ 
+@@ -117,6 +118,9 @@ static ssize_t proc_bus_pci_write(struct file *file, const char __user *buf,
+ 	int size = dev->cfg_size;
+ 	int cnt;
+ 
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	if (pos >= size)
+ 		return 0;
+ 	if (nbytes >= size)
+@@ -196,6 +200,9 @@ static long proc_bus_pci_ioctl(struct file *file, unsigned int cmd,
+ #endif /* HAVE_PCI_MMAP */
+ 	int ret = 0;
+ 
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	switch (cmd) {
+ 	case PCIIOC_CONTROLLER:
+ 		ret = pci_domain_nr(dev->bus);
+@@ -237,7 +244,8 @@ static int proc_bus_pci_mmap(struct file *file, struct vm_area_struct *vma)
+ 	struct pci_filp_private *fpriv = file->private_data;
+ 	int i, ret, write_combine = 0, res_bit = IORESOURCE_MEM;
+ 
+-	if (!capable(CAP_SYS_RAWIO))
++	if (!capable(CAP_SYS_RAWIO) ||
++	    kernel_lockdown)
+ 		return -EPERM;
+ 
+ 	if (fpriv->mmap_state == pci_mmap_io) {
+diff --git a/drivers/pci/syscall.c b/drivers/pci/syscall.c
+index d96626c..f793681 100644
+--- a/drivers/pci/syscall.c
++++ b/drivers/pci/syscall.c
+@@ -7,6 +7,7 @@
+ 
+ #include <linux/errno.h>
+ #include <linux/pci.h>
++#include <linux/security.h>
+ #include <linux/syscalls.h>
+ #include <linux/uaccess.h>
+ #include "pci.h"
+@@ -90,7 +91,8 @@ SYSCALL_DEFINE5(pciconfig_write, unsigned long, bus, unsigned long, dfn,
+ 	u32 dword;
+ 	int err = 0;
+ 
+-	if (!capable(CAP_SYS_ADMIN))
++	if (!capable(CAP_SYS_ADMIN) ||
++	    kernel_lockdown)
+ 		return -EPERM;
+ 
+ 	dev = pci_get_domain_bus_and_slot(0, bus, dfn);

@@ -1,0 +1,22 @@
+diff --git a/drivers/tty/serial/serial_core.c b/drivers/tty/serial/serial_core.c
+index dc56cdd..3e96b14 100644
+--- a/drivers/tty/serial/serial_core.c
++++ b/drivers/tty/serial/serial_core.c
+@@ -22,6 +22,7 @@
+ #include <linux/serial_core.h>
+ #include <linux/delay.h>
+ #include <linux/mutex.h>
++#include <linux/security.h>
+ 
+ #include <linux/irq.h>
+ #include <linux/uaccess.h>
+@@ -866,6 +867,9 @@ static int uart_set_info(struct tty_struct *tty, struct tty_port *port,
+ 		goto check_and_exit;
+ 	}
+ 
++	if (kernel_lockdown && (change_irq || change_port))
++		goto exit;
++
+ 	/*
+ 	 * Ask the low level driver to verify the settings.
+ 	 */

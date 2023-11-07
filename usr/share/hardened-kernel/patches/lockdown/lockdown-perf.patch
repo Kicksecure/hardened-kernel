@@ -1,0 +1,14 @@
+diff --git a/kernel/events/core.c b/kernel/events/core.c
+index 460d5fd..73cc6ee 100644
+--- a/kernel/events/core.c
++++ b/kernel/events/core.c
+@@ -10507,6 +10507,9 @@ SYSCALL_DEFINE5(perf_event_open,
+ 			return -EINVAL;
+ 	}
+ 
++	if (kernel_lockdown)
++		return -EPERM;
++
+ 	/* Only privileged users can get physical addresses */
+ 	if ((attr.sample_type & PERF_SAMPLE_PHYS_ADDR) &&
+ 	    perf_paranoid_kernel() && !capable(CAP_SYS_ADMIN))
