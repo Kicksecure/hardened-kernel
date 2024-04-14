@@ -1,0 +1,86 @@
+diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
+index 9ae9f28..6f31664 100644
+--- a/Documentation/admin-guide/kernel-parameters.txt
++++ b/Documentation/admin-guide/kernel-parameters.txt
+@@ -2186,6 +2186,12 @@
+ 	lockd.nlm_udpport=M	[NFS] Assign UDP port.
+ 			Format: <integer>
+ 
++	lockdown=	[SECURITY]
++			{ on | off }
++			Enable the kernel lockdown feature. If set to on,
++			kernel lockdown will be enabled and features that
++			allow userspace to modify the kernel will be disabled.
++
+ 	locktorture.nreaders_stress= [KNL]
+ 			Set the number of locking read-acquisition kthreads.
+ 			Defaults to being automatically set based on the
+diff --git a/include/linux/security.h b/include/linux/security.h
+index 75f4156..1a69db0 100644
+--- a/include/linux/security.h
++++ b/include/linux/security.h
+@@ -66,6 +66,9 @@ struct audit_krule;
+ struct user_namespace;
+ struct timezone;
+ 
++/* Kernel lockdown */
++extern int kernel_lockdown;
++
+ enum lsm_event {
+ 	LSM_POLICY_CHANGE,
+ };
+diff --git a/security/Kconfig b/security/Kconfig
+index a921713..92b4f43 100644
+--- a/security/Kconfig
++++ b/security/Kconfig
+@@ -281,6 +281,13 @@ config STATIC_USERMODEHELPER_PATH
+ 	  If you wish for all usermode helper programs to be disabled,
+ 	  specify an empty string here (i.e. "").
+ 
++config SECURITY_LOCKDOWN
++	bool "Enable kernel lockdown"
++	default y
++	help
++	  Enables kernel lockdown which disables any feature that
++	  userspace can abuse to compromise the kernel.
++
+ source security/selinux/Kconfig
+ source security/smack/Kconfig
+ source security/tomoyo/Kconfig
+diff --git a/security/Makefile b/security/Makefile
+index 4d2d378..4b183ad 100644
+--- a/security/Makefile
++++ b/security/Makefile
+@@ -30,3 +30,6 @@ obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
+ # Object integrity file lists
+ subdir-$(CONFIG_INTEGRITY)		+= integrity
+ obj-$(CONFIG_INTEGRITY)			+= integrity/
++
++# Kernel lockdown
++obj-y					+= lockdown.o
+diff --git a/security/lockdown.c b/security/lockdown.c
+new file mode 100644
+index 0000000..f9291b3
+--- /dev/null
++++ b/security/lockdown.c
+@@ -0,0 +1,20 @@
++// SPDX-License-Identifier: GPL-2.0
++#include <linux/security.h>
++
++int kernel_lockdown __ro_after_init = IS_ENABLED(CONFIG_SECURITY_LOCKDOWN);
++
++static int __init enable_lockdown(char *level)
++{
++	if (!level)
++		return -EINVAL;
++
++	if (strcmp(level, "on") == 0)
++		kernel_lockdown = 1;
++	else if (strcmp(level, "off") == 0)
++		kernel_lockdown = 0;
++	else
++		return -EINVAL;
++
++	return 0;
++}
++early_param("lockdown", enable_lockdown);
