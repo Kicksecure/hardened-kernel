@@ -12,7 +12,7 @@ Build-Depends: debhelper (>= 13), debhelper-compat (= 13),
 Homepage: https://www.kicksecure.com/wiki/Hardened-kernel
 Vcs-Browser: https://github.com/Kicksecure/hardened-kernel
 Vcs-Git: https://github.com/Kicksecure/hardened-kernel.git
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
 Package: hardened-kernel
