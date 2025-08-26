@@ -1,3 +1,40 @@
+commit 749830db937507bdbdc93e340819ccd7b003ebc8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 07:32:04 2025 -0400
+
+    delete deprecated .travis.yml file
+
+commit c8c129ff52832cd7006ba36a0f9e78365cd79968
+Merge: 043f279 6452df9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 07:31:31 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 043f27943f2018d9f55c4c91495583912a35237a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:57:25 2025 -0400
+
+    bumped Standards-Version
+
+commit a37f5317f5f798014a022fe68ee8808ea0d5ab02
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:25:32 2025 -0400
+
+    readme
+
+commit 6452df98372da6e0a0779c4a446498200e92ff7d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:58:00 2025 -0500
+
+    Port to Trixie.
+
+commit 0e1d8406087fe2028ab06b2570076d23ed84df04
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 23 16:20:27 2025 +0000
+
+    bumped changelog version
+
 commit 5eb54eaa015dd97de5652e651f1b6cd73cab49e4
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jan 23 11:10:27 2025 -0500
