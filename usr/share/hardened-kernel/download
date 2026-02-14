@@ -46,6 +46,7 @@ curl $curl_opts "${linux_hardened_patch_archive}" -o "./linux-hardened-${version
 
 true "OK"
 
+## TODO: port to sequoia-pgp
 ## cd /home/user/Whonix/packages/hardened-kernel/usr/src/hardened-kernel/files
 ## gpg --verify sha256sums.asc
 ## sha256sum --ignore-missing --check sha256sums.asc
