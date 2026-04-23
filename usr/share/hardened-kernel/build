@@ -99,7 +99,7 @@ cp "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 ## Sanity test.
 diff "${MYDIR}/${kernel_config}" "$extracted_linux_kernel_sources_folder/.config"
 
-if [ "$CI" = "true" ]; then
+if [ "${CI:-}" = "true" ]; then
    true "Sanity test. 'make oldconfig' should not modify '.config'."
    true "https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317"
    make oldconfig -C "$extracted_linux_kernel_sources_folder"
