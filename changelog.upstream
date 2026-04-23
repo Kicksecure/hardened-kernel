@@ -1,3 +1,15 @@
+commit 8124f1d1ffa64285dbb243971bfdc5e996acfa2a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 23 06:35:22 2026 -0400
+
+    refactoring
+
+commit 559efd88c5b33bbe15e2f3801ce561e5555562a7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Feb 14 12:36:38 2026 +0000
+
+    bumped changelog version
+
 commit 596bcd22b436a95926e6065af243e32e6bc9a7f4
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Feb 14 05:48:52 2026 -0500
@@ -294,7 +306,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jun 5 15:19:59 2021 -0400
 
     Merge pull request #57 from madaidan/kprobes
-    
+
     Enable kprobes
 
 commit 1fdfc87335534e627a29b6cc8d140c5634ce9dd5
@@ -308,7 +320,7 @@ Author: madaidan <50278627+madaidan@users.noreply.github.com>
 Date:   Fri Jun 4 20:33:39 2021 +0000
 
     Revert "Optionally enable kprobes/ftrace for LKRG support"
-    
+
     This reverts commit 629b62475455ce5ef073e6ba8b970ea76ade88a0.
 
 commit aa28d16ff6de836058152c1e6e1edd24f1a0fd01
@@ -340,7 +352,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 22 08:12:17 2020 -0500
 
     CI fix
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/504
 
 commit 1e58d940b7973d7f7f91ccd49935f93ef04c6b7b
@@ -362,7 +374,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Dec 20 06:39:24 2020 +0000
 
     Merge pull request #56 from madaidan/lkrg
-    
+
     Optionally enable kprobes/ftrace for LKRG support
 
 commit 629b62475455ce5ef073e6ba8b970ea76ade88a0
@@ -390,7 +402,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Dec 14 06:30:32 2020 +0000
 
     Merge pull request #55 from madaidan/system_trusted_keys
-    
+
     Fix issue with compiling host kernel
 
 commit 10690848e25685282c340d4551347734a0ddfe05
@@ -410,7 +422,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 29 16:54:23 2020 -0400
 
     downgrade to --tlsv1.2 since --tlsv1.3 is unsupported by kernel.org
-    
+
     https://www.hardenize.com/report/kernel.org/1603725038#www_tls
 
 commit 0609d89e7b7d760a7cd6c52d50a0149f9f475bbd
@@ -450,7 +462,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue May 12 15:04:28 2020 +0000
 
     Merge pull request #54 from madaidan/master
-    
+
     Update to 4.19.122
 
 commit ba34167459fab24b973f722b438bd09b83593ae6
@@ -490,7 +502,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 13 17:52:34 2020 +0000
 
     Merge pull request #53 from madaidan/legacy
-    
+
     Disable legacy drivers
 
 commit 641af41f936cef17a4870d4904a61166d6826859
@@ -524,7 +536,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 13 10:19:54 2020 +0000
 
     Merge pull request #51 from madaidan/unneeded
-    
+
     Disable unneeded drivers - actually not reviewed but tracking that here: https://phabricator.whonix.org/T955
 
 commit 3f1b8981508b8b1f344328d031e8db2134907249
@@ -582,7 +594,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 11 12:59:47 2020 +0000
 
     Merge pull request #52 from madaidan/4.19.108
-    
+
     Update to 4.19.108
 
 commit 6347efb35b8ca8fd2640601670896cff8764785b
@@ -615,34 +627,34 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 4 08:46:51 2020 -0500
 
     Merge remote-tracking branch 'origin/master'
-    
+
     breaks:
-    
+
     CONFIG_RTL8192U
     RealTek RTL8192U Wireless LAN NIC driver
-    
+
     CONFIG_RTL8192E
     RealTek RTL8192E Wireless LAN NIC driver
-    
+
     CONFIG_RTL8723BS
     RTL8723BS SDIO
     Intel Compute Stick, the CHIP and many other Intel Atom and ARM based devices
-    
+
     R8712U
     D-Link DWA-130
-    
+
     CONFIG_R8188EU
     TP-Link TL-WN725N
-    
+
     CONFIG_R8822BE
     Realtek RTL8822BE 802.11ac
-    
+
     CONFIG_RTS5208
     Realtek PCI-E Card Reader RTS5208/5288 support
-    
+
     data acquisition device
     CONFIG_COMEDI
-    
+
     IIO staging drivers
     Accelerometers
     Analog to digital converters
@@ -652,16 +664,16 @@ Date:   Wed Mar 4 08:46:51 2020 -0500
     Resolver to digital converters
     Speakup console speech
     Gasket devices
-    
+
     * Android
-    
+
     * Android related
-    
+
     CONFIG_ANDROID_VSOC
     Android Virtual SoC support
     Virtual SoC driver needed to boot a 'cuttlefish' Android image inside QEmu. The driver interacts with a QEmu ivshmem device. If built as a module, it will be called vsoc.
     Raspberry Pi related:
-    
+
     * Pi433 - a 433MHz radio module for Raspberry Pi
     * CONFIG_PI433
 
@@ -671,7 +683,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Mar 4 13:24:36 2020 +0000
 
     Merge pull request #45 from madaidan/staging
-    
+
     Disable staging drivers
 
 commit fa176201be3fccb0b6b747c62d55d091d0e44051
@@ -699,7 +711,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 2 11:36:34 2020 +0000
 
     Merge pull request #50 from madaidan/hdlc
-    
+
     Disable HDLC in host kernel
 
 commit caf2fe40ee17a2e9482a3e2f96178e2f837c8188
@@ -715,7 +727,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 29 08:43:02 2020 +0000
 
     Merge pull request #48 from madaidan/mce
-    
+
     Re-enable MCE in VM kernel
 
 commit c14e42b6a040ac044b5b6f890585d402745be49f
@@ -724,7 +736,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 29 08:30:58 2020 +0000
 
     Merge pull request #49 from madaidan/dev_coredump
-    
+
     Disable device coredump
 
 commit 4420dac87041169e0c8effd9011591a4edb7bc22
@@ -776,7 +788,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 26 10:58:45 2020 +0000
 
     Merge pull request #46 from madaidan/virtio-rng
-    
+
     Compile only virtio-rng as built-in
 
 commit 3cdb41c5e5b22b03ab86dd638347115320de38ed
@@ -784,9 +796,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 26 05:54:57 2020 -0500
 
     Revert "Revert "Compile HWRNGs as built-in""
-    
+
     This reverts commit 6913763980bcfff164d59f0277238befb35d55c2.
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/397
 
 commit f2f88e95d9bca28f7f60eabe5c01e05e3975a630
@@ -800,7 +812,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Feb 23 10:48:54 2020 -0500
 
     Revert "Compile HWRNGs as built-in"
-    
+
     This reverts commit 136347b4b18bfa533cf2f59fe4ffec23d8c403b6.
 
 commit cb5abcb5db9a8daa033a265be1f88f7e39d4cf9c
@@ -816,7 +828,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 22 06:27:03 2020 +0000
 
     Merge pull request #44 from madaidan/rng
-    
+
     Compile HWRNGs as built-in
 
 commit c41c461b9ea75e4074cc008942161dd534346b29
@@ -850,7 +862,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 15 19:41:38 2020 +0000
 
     Merge pull request #43 from madaidan/sysrq
-    
+
     Restrict the SysRq key
 
 commit c02954d47d42c4c5bd850846fc3c7e30a5e1bed7
@@ -866,7 +878,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 15 10:10:11 2020 +0000
 
     Merge pull request #42 from madaidan/ldisc
-    
+
     Restrict loading line disciplines to CAP_SYS_MODULE
 
 commit fa1de31935400d312fdaa9af2806705856448355
@@ -912,7 +924,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Feb 13 18:31:42 2020 +0000
 
     Merge pull request #41 from madaidan/rc
-    
+
     Disable remote controllers in VM kernel
 
 commit 825a4076d4464937599d611f4b29d7cb3200c58a
@@ -932,7 +944,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 22 09:47:57 2020 -0500
 
     Sanity test. 'make oldconfig' should not modify '.config'."
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317
 
 commit 9871377b279de4932f8710b76a4388d22c2b784a
@@ -940,9 +952,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 22 09:39:45 2020 -0500
 
     use standard kernel config file header comment
-    
+
     to be able to use "make oldconfig" as sanity test
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/317
 
 commit ff4bbf8c77fd10037080f4088165283906af234e
@@ -964,7 +976,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 22 08:40:05 2020 +0000
 
     Merge pull request #40 from madaidan/inet_diag
-    
+
     Disable INET socket monitoring interface
 
 commit d1b0bc2f47687bb25f5359cd91df7b0e22d347e4
@@ -1010,7 +1022,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 21 06:33:36 2020 +0000
 
     Merge pull request #39 from madaidan/4.19.97
-    
+
     Update to 4.19.97
 
 commit 3acb0b267757c2a7793bb967405e2ae80424de1d
@@ -1019,7 +1031,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 21 06:32:18 2020 +0000
 
     Merge pull request #38 from madaidan/coredump
-    
+
     Disable coredumps
 
 commit 7b831c7a6da1d8ee71be25019d7738023c9ac81b
@@ -1028,7 +1040,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 21 06:31:39 2020 +0000
 
     Merge pull request #37 from madaidan/vsyscall_emulation
-    
+
     Disable vsyscall emulation
 
 commit fff630aae4bfed6eeeabe3802ab0697a1ff5ab22
@@ -1037,7 +1049,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 21 06:27:44 2020 +0000
 
     Merge pull request #36 from madaidan/module_sig
-    
+
     Sign all kernel modules
 
 commit 7cec525d21817d81afc6b8d1791ffc1719924632
@@ -1119,7 +1131,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 20 12:23:56 2020 +0000
 
     Merge pull request #34 from madaidan/disable_debugfs
-    
+
     Disable debugfs
 
 commit a985d1d88e7386f53927a883cea0440709d402cf
@@ -1183,7 +1195,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 19 09:40:52 2020 +0000
 
     Merge pull request #32 from madaidan/error_injection
-    
+
     Disable notifier error injection
 
 commit 1b1d4ca42c135d7852652328c30ed8628624d070
@@ -1192,7 +1204,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 19 09:32:05 2020 +0000
 
     Merge pull request #33 from madaidan/debug_virtual
-    
+
     Enable sanity checks in virtual to page code
 
 commit ab1e995afedbeef65bd2db5ca95caf57c6bcb467
@@ -1238,7 +1250,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 18 10:52:54 2020 +0000
 
     Merge pull request #31 from madaidan/bpf-syscall
-    
+
     Disable bpf() syscall
 
 commit 31ba7a1e8e8e8c475a6f43b632e66bc128ed7296
@@ -1279,7 +1291,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 17:33:57 2020 +0000
 
     Merge pull request #30 from madaidan/debug-config
-    
+
     Enable /dev/mem and disable panic_on_oops in debugging config
 
 commit f1bbad209a0106b00e94fcb81efed24331c7937e
@@ -1373,7 +1385,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 07:29:29 2020 +0000
 
     Merge pull request #28 from madaidan/reset_attack
-    
+
     Enable reset attack mitigation in host kernel
 
 commit 6175e12e2326fb984a408536b9573e4835bb6b29
@@ -1382,7 +1394,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 17 07:29:14 2020 +0000
 
     Merge pull request #29 from madaidan/devmem
-    
+
     Disable /dev/mem
 
 commit 2dc5e3d969ed11f07be14fb0879fe8508319b3b0
@@ -1444,7 +1456,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 16 07:37:18 2020 -0500
 
     back to downloading on user's machine for now
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/267
 
 commit 5fb98216b5535a63bbf0795247c714ad0efdcf64
@@ -1470,7 +1482,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 16 06:05:50 2020 -0500
 
     no more download on user's machine
-    
+
     add download helper script for developers
 
 commit 9519547d1b5ddd1ea0b99e2eb72adfd93bc75629
@@ -1552,7 +1564,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 21:07:01 2020 +0000
 
     Merge pull request #24 from madaidan/panic_on_oops
-    
+
     Enable CONFIG_PANIC_ON_OOPS for VM kernel
 
 commit 910f7699e56116f3bd7d53b010a4c4a3725ef586
@@ -1568,7 +1580,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 20:51:17 2020 +0000
 
     Merge pull request #22 from madaidan/binfmt_misc
-    
+
     Disable binfmt_misc
 
 commit 5ad7d5c33bf47898ff3b4bd4560a84de5924ebcf
@@ -1577,7 +1589,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 20:50:54 2020 +0000
 
     Merge pull request #27 from madaidan/oldconfig
-    
+
     Fix debug build
 
 commit a092381aaadda584635ed63ba5dfc630321838e0
@@ -1651,7 +1663,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 07:17:31 2020 -0500
 
     change working folders to /var/lib/hardened-kernel/hardened-vm-kernel and /var/lib/hardened-kernel/hardened-host-kernel
-    
+
     so /var/lib/hardened-kernel can be restricted with apparmor
 
 commit 844e1f0c9628556946ee268a90ffd3e514f48f88
@@ -1691,7 +1703,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 07:57:34 2020 +0000
 
     Merge pull request #26 from madaidan/debugging
-    
+
      Add a way to easily enable debugging options
 
 commit bbfea74ae1c8e792c56a483e0a654a791bd7305c
@@ -1700,7 +1712,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 15 07:56:44 2020 +0000
 
     Merge pull request #25 from madaidan/profiling
-    
+
     Disable profiling support
 
 commit c92ec70338663dec73cc650db07b1753c5b95edd
@@ -1739,7 +1751,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 14 13:41:52 2020 +0000
 
     Merge pull request #23 from madaidan/nouveau
-    
+
     Disable nouveau legacy contexts
 
 commit 517c5fc7863bc7103d8d6af05a65befb858431ed
@@ -1785,7 +1797,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 20:16:10 2020 +0000
 
     Merge pull request #21 from madaidan/vivid
-    
+
     Disable vivid
 
 commit 251c056f4ffab99bb9b48c5d7d235937944ad7e2
@@ -1911,7 +1923,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 08:33:48 2020 +0000
 
     Merge pull request #18 from madaidan/sctp
-    
+
     Disable SCTP
 
 commit 82a379dd3c0446d253346c986af20aad046e018e
@@ -1920,7 +1932,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 08:30:03 2020 +0000
 
     Merge pull request #19 from madaidan/bpf_jit_always_on
-    
+
     Enable BPF_JIT_ALWAYS_ON
 
 commit b8cc09027e2df5336ee0f0648a09b0458b1ee26d
@@ -1953,7 +1965,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 10 19:27:13 2020 +0000
 
     Merge pull request #17 from madaidan/acpi_table_upgrade
-    
+
     Disable ACPI table upgrading
 
 commit 2ec6a682b4494dfafb6ff1fbcd66c6d14f55ba38
@@ -1962,7 +1974,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 10 19:26:22 2020 +0000
 
     Merge pull request #16 from madaidan/4.19.93
-    
+
     Update to 4.19.93
 
 commit 48f1d8fdbe417f0e2d10fa087f221a745428e9e3
@@ -2012,7 +2024,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 28 04:58:40 2019 -0500
 
     try fix
-    
+
     tar -xf /root/kernel/linux-4.19.91.tar.xz -C /root/kernel/linux-4.19.91/
     tar: /root/kernel/linux-4.19.91: Cannot open: No such file or directory
 
@@ -2071,7 +2083,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Dec 28 09:18:41 2019 +0000
 
     Merge pull request #14 from madaidan/linux-hardened
-    
+
      Use kernel.org sources and apply linux-hardened patch
 
 commit c2a6c750ef99424044f373a26e7119daae3c90e3
@@ -2091,7 +2103,7 @@ Author: madaidan <50278627+madaidan@users.noreply.github.com>
 Date:   Thu Dec 26 15:06:24 2019 +0000
 
     Disable page poisoning
-    
+
     We're going to use linux-hardened's CONFIG_PAGE_SANITIZE instead
 
 commit 9a089d4e909c110e5e716c1c72920e69ee89a5a6
@@ -2168,7 +2180,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Dec 27 06:35:26 2019 +0000
 
     Merge pull request #15 from madaidan/jobs
-    
+
     Use [number_of_cores + 1] parallel jobs for compilation
 
 commit 6d6e82b5ff01d9f22f1a55902511e49f478f78aa
@@ -2194,7 +2206,7 @@ Author: madaidan <50278627+madaidan@users.noreply.github.com>
 Date:   Thu Dec 26 15:06:24 2019 +0000
 
     Disable page poisoning
-    
+
     We're going to use linux-hardened's CONFIG_PAGE_SANITIZE instead
 
 commit 224b93ca771b04c6e4175b8224931c3d284bf256
@@ -2215,7 +2227,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 25 12:34:20 2019 +0000
 
     Merge pull request #13 from madaidan/networking
-    
+
     Disable some unneeded networking stuff
 
 commit b0dc73ee6bc0e7e36b8b2654286035749f329215
@@ -2253,7 +2265,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 19 09:14:30 2019 -0500
 
     fix non-interactive build issue
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/159
 
 commit b9ef5ad2fa241adbd233b4a5ed274b9e26795017
@@ -2269,7 +2281,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 19 14:04:07 2019 +0000
 
     Merge pull request #12 from madaidan/gcc-plugins
-    
+
     Enable GCC plugins
 
 commit 03ff56715462ea3601e5b2f2f2c1f51bb138ec5e
@@ -2337,9 +2349,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 19 08:08:39 2019 -0500
 
     add gcc-8-plugin-dev
-    
+
     as reported by @madaidan
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/147
 
 commit e1e63c059a57e28b9bd9c5ca642397ba717cef9a
@@ -2353,7 +2365,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 18 14:57:46 2019 -0500
 
     add suggestions by @madaidan
-    
+
     https://forums.whonix.org/t/kernel-recompilation-for-better-hardening/7598/145
 
 commit 083aa69d94eec543017c554d99d47dd20becc100
@@ -2381,7 +2393,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 18 12:36:53 2019 +0000
 
     Merge pull request #10 from madaidan/hardening
-    
+
     More hardening
 
 commit 390c6ae36697e93ff345477b90ed9ec124a7c0ac
@@ -2396,7 +2408,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 12 20:16:28 2019 +0000
 
     Merge pull request #8 from madaidan/distrust-cpu
-    
+
     Distrust the CPU for initial entropy
 
 commit 1d806c7ed8f9a8f0ae573d18d072a1aed992d437
@@ -2405,7 +2417,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 12 20:16:13 2019 +0000
 
     Merge pull request #7 from madaidan/hardening
-    
+
     More hardening
 
 commit e6b8c4b4049fe2d98aba8f4de866718106f68a79
@@ -2420,7 +2432,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 11 21:29:13 2019 +0000
 
     Merge pull request #6 from madaidan/disable-ksm
-    
+
     Disable KSM
 
 commit 95032afa3362093f625e2608ac9cd8ad3ba40f53
@@ -2429,7 +2441,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 3 06:35:46 2019 +0000
 
     Merge pull request #9 from madaidan/jitterentropy
-    
+
     Compile jitterentropy as built-in
 
 commit ac6c752b656d82fa227a8e4e10a946aa8cd693db
@@ -2462,7 +2474,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Nov 23 15:47:26 2019 +0000
 
     Merge pull request #5 from madaidan/disable-aio
-    
+
     Disable AIO
 
 commit a9a63deb995504c5430f1e27c2913ada5e6ee993
@@ -2477,7 +2489,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Nov 23 15:09:53 2019 +0000
 
     Merge pull request #4 from madaidan/unneeded
-    
+
     Remove unneeded stuff
 
 commit c89043075216a7098b7603009f2334d73bd4d73b
@@ -2498,7 +2510,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Nov 23 06:20:51 2019 +0000
 
     Merge pull request #3 from madaidan/kvm
-    
+
     KVM fixes
 
 commit 74e8fe5be1698f8d94712fb7ccdbe90471be9ccf
@@ -2525,7 +2537,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Nov 13 06:52:00 2019 +0000
 
     Merge pull request #2 from madaidan/hardening
-    
+
     Disable ftrace
 
 commit 5c873d9ad90b164dd79d806b129a74608de2ebb5
@@ -2540,7 +2552,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 12 10:03:23 2019 +0000
 
     Merge pull request #1 from madaidan/hardening
-    
+
     More hardening
 
 commit e9fc275d0e321278c7ac0c6e61eabf587a7b3b51
